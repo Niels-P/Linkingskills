@@ -33,6 +33,7 @@
 		2E9F93C01A8D5A470088DAF9 /* Slide.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E9F93BF1A8D5A470088DAF9 /* Slide.swift */; };
 		2E9F93C21A8D64B90088DAF9 /* logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 2E9F93C11A8D64B90088DAF9 /* logo.png */; };
 		2E9F93C41A8D716B0088DAF9 /* LinkedinLoginController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E9F93C31A8D716B0088DAF9 /* LinkedinLoginController.swift */; };
+		2EB964441A9CE78700082D51 /* defaultController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EB964431A9CE78700082D51 /* defaultController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -43,23 +44,23 @@
 			remoteGlobalIDString = 2E07FDAD1A852B2E001E2135;
 			remoteInfo = MissingSkills;
 		};
-		2EB964311A9CDE9D00082D51 /* PBXContainerItemProxy */ = {
+		2EB9643D1A9CE37900082D51 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 2EB9642C1A9CDE9D00082D51 /* OAuthSwift.xcodeproj */;
+			containerPortal = 2EB964381A9CE37900082D51 /* OAuthSwift.xcodeproj */;
 			proxyType = 2;
 			remoteGlobalIDString = F451E3C5195B8CD80051434C;
 			remoteInfo = OAuthSwiftDemo;
 		};
-		2EB964331A9CDE9D00082D51 /* PBXContainerItemProxy */ = {
+		2EB9643F1A9CE37900082D51 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 2EB9642C1A9CDE9D00082D51 /* OAuthSwift.xcodeproj */;
+			containerPortal = 2EB964381A9CE37900082D51 /* OAuthSwift.xcodeproj */;
 			proxyType = 2;
 			remoteGlobalIDString = F435027A1A6791B200038A29;
 			remoteInfo = OAuthSwift;
 		};
-		2EB964351A9CDEA600082D51 /* PBXContainerItemProxy */ = {
+		2EB964411A9CE38A00082D51 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 2EB9642C1A9CDE9D00082D51 /* OAuthSwift.xcodeproj */;
+			containerPortal = 2EB964381A9CE37900082D51 /* OAuthSwift.xcodeproj */;
 			proxyType = 1;
 			remoteGlobalIDString = F43502791A6791B200038A29;
 			remoteInfo = OAuthSwift;
@@ -97,7 +98,8 @@
 		2E9F93BF1A8D5A470088DAF9 /* Slide.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Slide.swift; sourceTree = "<group>"; };
 		2E9F93C11A8D64B90088DAF9 /* logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = logo.png; sourceTree = "<group>"; };
 		2E9F93C31A8D716B0088DAF9 /* LinkedinLoginController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LinkedinLoginController.swift; sourceTree = "<group>"; };
-		2EB9642C1A9CDE9D00082D51 /* OAuthSwift.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = OAuthSwift.xcodeproj; path = "../../OAuthSwift-master 4/OAuthSwift.xcodeproj"; sourceTree = "<group>"; };
+		2EB964381A9CE37900082D51 /* OAuthSwift.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = OAuthSwift.xcodeproj; path = "../../../OAuthSwift-master 4/OAuthSwift.xcodeproj"; sourceTree = "<group>"; };
+		2EB964431A9CE78700082D51 /* defaultController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = defaultController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -139,7 +141,7 @@
 		2E07FDB01A852B2E001E2135 /* MissingSkills */ = {
 			isa = PBXGroup;
 			children = (
-				2EB9642C1A9CDE9D00082D51 /* OAuthSwift.xcodeproj */,
+				2EB964381A9CE37900082D51 /* OAuthSwift.xcodeproj */,
 				2E9F93BE1A8D5A370088DAF9 /* UIKitExtentions */,
 				2E9F93B31A8D47420088DAF9 /* Controllers */,
 				2E07FDD51A852D4B001E2135 /* RAMAnimatedTabBarController */,
@@ -255,6 +257,7 @@
 				2E07FDEC1A8530BB001E2135 /* SettingsController.swift */,
 				2E9F93B41A8D47830088DAF9 /* LoginController.swift */,
 				2E9F93C31A8D716B0088DAF9 /* LinkedinLoginController.swift */,
+				2EB964431A9CE78700082D51 /* defaultController.swift */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -267,11 +270,11 @@
 			name = UIKitExtentions;
 			sourceTree = "<group>";
 		};
-		2EB9642D1A9CDE9D00082D51 /* Products */ = {
+		2EB964391A9CE37900082D51 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				2EB964321A9CDE9D00082D51 /* OAuthSwiftDemo.app */,
-				2EB964341A9CDE9D00082D51 /* OAuthSwift.framework */,
+				2EB9643E1A9CE37900082D51 /* OAuthSwiftDemo.app */,
+				2EB964401A9CE37900082D51 /* OAuthSwift.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -290,7 +293,7 @@
 			buildRules = (
 			);
 			dependencies = (
-				2EB964361A9CDEA600082D51 /* PBXTargetDependency */,
+				2EB964421A9CE38A00082D51 /* PBXTargetDependency */,
 			);
 			name = MissingSkills;
 			productName = MissingSkills;
@@ -346,8 +349,8 @@
 			projectDirPath = "";
 			projectReferences = (
 				{
-					ProductGroup = 2EB9642D1A9CDE9D00082D51 /* Products */;
-					ProjectRef = 2EB9642C1A9CDE9D00082D51 /* OAuthSwift.xcodeproj */;
+					ProductGroup = 2EB964391A9CE37900082D51 /* Products */;
+					ProjectRef = 2EB964381A9CE37900082D51 /* OAuthSwift.xcodeproj */;
 				},
 			);
 			projectRoot = "";
@@ -359,18 +362,18 @@
 /* End PBXProject section */
 
 /* Begin PBXReferenceProxy section */
-		2EB964321A9CDE9D00082D51 /* OAuthSwiftDemo.app */ = {
+		2EB9643E1A9CE37900082D51 /* OAuthSwiftDemo.app */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.application;
 			path = OAuthSwiftDemo.app;
-			remoteRef = 2EB964311A9CDE9D00082D51 /* PBXContainerItemProxy */;
+			remoteRef = 2EB9643D1A9CE37900082D51 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		2EB964341A9CDE9D00082D51 /* OAuthSwift.framework */ = {
+		2EB964401A9CE37900082D51 /* OAuthSwift.framework */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.framework;
 			path = OAuthSwift.framework;
-			remoteRef = 2EB964331A9CDE9D00082D51 /* PBXContainerItemProxy */;
+			remoteRef = 2EB9643F1A9CE37900082D51 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
 /* End PBXReferenceProxy section */
@@ -421,6 +424,7 @@
 				2E07FDE51A852D4B001E2135 /* RAMFumeAnimation.swift in Sources */,
 				2E9F93C41A8D716B0088DAF9 /* LinkedinLoginController.swift in Sources */,
 				2E07FDE31A852D4B001E2135 /* RAMBounceAnimation.swift in Sources */,
+				2EB964441A9CE78700082D51 /* defaultController.swift in Sources */,
 				2E9252A81A8E46D800B5AC55 /* WebViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -441,10 +445,10 @@
 			target = 2E07FDAD1A852B2E001E2135 /* MissingSkills */;
 			targetProxy = 2E07FDC61A852B2E001E2135 /* PBXContainerItemProxy */;
 		};
-		2EB964361A9CDEA600082D51 /* PBXTargetDependency */ = {
+		2EB964421A9CE38A00082D51 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = OAuthSwift;
-			targetProxy = 2EB964351A9CDEA600082D51 /* PBXContainerItemProxy */;
+			targetProxy = 2EB964411A9CE38A00082D51 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 

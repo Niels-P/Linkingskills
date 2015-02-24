@@ -37,8 +37,7 @@ class LoginController: UIViewController
     
     func handleSwipes(sender:UISwipeGestureRecognizer) {
         if (sender.direction == .Left) {
-            curSlide = curSlide + 1;
-            
+            curSlide++;
             if(curSlide < tips.count) {
                 self.slidingTextLabel.slideInFromRight()
                 self.slidingTextLabel.text = tips[curSlide];
@@ -63,41 +62,19 @@ class LoginController: UIViewController
         
         if (sender.direction == .Right) {
             println(curSlide);
-            switch(curSlide) {
-                case 0:
-                    var curSlide = 2;
-                    println(curSlide);
-                    self.slidingTextLabel.slideInFromLeft()
-                    self.slidingTextLabel.text = tips[curSlide];
-                
-                    self.slidingTitleLabel.slideInFromLeft()
-                    self.slidingTitleLabel.text = tipstitle[curSlide];
-                
-                    pagec.currentPage = curSlide;
-                
-                    break;
-                case 1:
-                    var curSlide = 0;
-                    println(curSlide);
-                    self.slidingTextLabel.slideInFromLeft()
-                    self.slidingTextLabel.text = tips[curSlide];
-                    
-                    self.slidingTitleLabel.slideInFromLeft()
-                    self.slidingTitleLabel.text = tipstitle[curSlide];
-                    break;
-                case 2:
-                    var curSlide = 1;
-                    println(curSlide);
-
-                    self.slidingTextLabel.slideInFromLeft()
-                    self.slidingTextLabel.text = tips[curSlide];
-                    
-                    self.slidingTitleLabel.slideInFromLeft()
-                    self.slidingTitleLabel.text = tipstitle[curSlide];
-                    break;
-            default:
-                break;
+            
+            curSlide--;
+            if(curSlide == -1) {
+                curSlide = tips.count - 1;
             }
+            
+            self.slidingTextLabel.slideInFromRight()
+            self.slidingTextLabel.text = tips[curSlide];
+            
+            self.slidingTitleLabel.slideInFromRight()
+            self.slidingTitleLabel.text = tipstitle[curSlide];
+            
+            pagec.currentPage = curSlide;
         }
     }
     
