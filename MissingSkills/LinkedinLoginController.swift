@@ -44,12 +44,16 @@ class LinkedinLoginController: UIViewController, NSXMLParserDelegate {
         )
         oauthswift.authorizeWithCallbackURL( NSURL(string: "oauth-swift://oauth-callback/linkedin")!, success: {
             credential, response in
-            self.storeTokens("Linkedin", message: "oauth_token:\(credential.oauth_token)\n\noauth_toke_secret:\(credential.oauth_token_secret)")
+            self.storeTokens("Linkedin", token: "\(credential.oauth_token)", secret: "\(credential.oauth_token_secret)")
+            println("Token BELANGRIJK: \(credential.oauth_token)");
+            println("Secret BELANGRIJK: \(credential.oauth_token_secret)");
             var parameters =  Dictionary<String, AnyObject>()
             oauthswift.client.get("https://api.linkedin.com/v1/people/~:(skills,first-name,last-name,picture-url)", parameters: parameters,
                 success: {
                     data, response in
+                    println("PARAMETERS: \(parameters)");
                     let dataString = NSString(data: data, encoding: NSUTF8StringEncoding)
+                    println(parameters);
                     self.loginUser(dataString!);
                     var prefs:NSUserDefaults = NSUserDefaults.standardUserDefaults()
                     prefs.setInteger(1, forKey: "ISLOGIN")
@@ -63,8 +67,13 @@ class LinkedinLoginController: UIViewController, NSXMLParserDelegate {
     }
     
     
-    func storeTokens(title: String, message: String) {
-        
+    func storeTokens(title: String, token: String, secret: String) {
+        var object = PFObject(className: "users")
+        var uuid = NSUUID().UUIDString
+        object.addObject(uuid, forKey: "uuid")
+        object.addObject(token, forKey: "oauth_token")
+        object.addObject(secret, forKey: "oauth_toke_secret")
+        object.save()
     }
     
     func loginUser(data: String) {

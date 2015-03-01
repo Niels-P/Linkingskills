@@ -225,7 +225,7 @@ With skillcoins you can buy discount for study’s or complete courses that can 
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nuj-b7-CfR">
                                 <rect key="frame" x="161" y="473" width="143" height="30"/>
-                                <color key="backgroundColor" red="0.99215686274509807" green="0.61824185015178423" blue="0.17439016723091835" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" red="0.99215686274509807" green="0.67843137254901964" blue="0.22745098039215686" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="143" id="jSP-yH-Tlr"/>
                                 </constraints>
