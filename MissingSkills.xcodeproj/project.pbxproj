@@ -30,7 +30,6 @@
 		2E34349A1AA2304100475D36 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2E3434981AA2303A00475D36 /* MobileCoreServices.framework */; };
 		2E34349D1AA2304E00475D36 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2E34349B1AA2304800475D36 /* QuartzCore.framework */; };
 		2E3434A01AA2305F00475D36 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2E34349E1AA2305400475D36 /* Security.framework */; };
-		2E3434A31AA2306E00475D36 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2E3434A11AA2306700475D36 /* StoreKit.framework */; };
 		2E3434A61AA2307C00475D36 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2E3434A41AA2307400475D36 /* SystemConfiguration.framework */; };
 		2E3434AD1AA2308E00475D36 /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2E3434A81AA2308E00475D36 /* Bolts.framework */; };
 		2E3434AE1AA2308E00475D36 /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2E3434A91AA2308E00475D36 /* Parse.framework */; };
@@ -43,12 +42,17 @@
 		2E426F071A8EA56E00A74684 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E426F061A8EA56E00A74684 /* DetailViewController.swift */; };
 		2E426F091A8EA59300A74684 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E426F081A8EA59300A74684 /* Colors.swift */; };
 		2E426F0B1A8EA70300A74684 /* CustomCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E426F0A1A8EA70300A74684 /* CustomCell.swift */; };
+		2E8052EB1AA644B10034D787 /* jobsTable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E8052EA1AA644B10034D787 /* jobsTable.swift */; };
+		2E8052EF1AA64B090034D787 /* JobsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E8052EE1AA64B090034D787 /* JobsTableViewController.swift */; };
+		2E848A2C1AA756E90022DE65 /* colorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E848A2B1AA756E90022DE65 /* colorExtension.swift */; };
+		2E8840E71AA4B19B00C1E362 /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E8840E61AA4B19B00C1E362 /* SWRevealViewController.m */; };
 		2E9252A81A8E46D800B5AC55 /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E9252A71A8E46D800B5AC55 /* WebViewController.swift */; };
 		2E9F93B51A8D47830088DAF9 /* LoginController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E9F93B41A8D47830088DAF9 /* LoginController.swift */; };
 		2E9F93BD1A8D55B10088DAF9 /* pageT1.png in Resources */ = {isa = PBXBuildFile; fileRef = 2E9F93BC1A8D55B10088DAF9 /* pageT1.png */; };
 		2E9F93C01A8D5A470088DAF9 /* Slide.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E9F93BF1A8D5A470088DAF9 /* Slide.swift */; };
 		2E9F93C21A8D64B90088DAF9 /* logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 2E9F93C11A8D64B90088DAF9 /* logo.png */; };
 		2E9F93C41A8D716B0088DAF9 /* LinkedinLoginController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E9F93C31A8D716B0088DAF9 /* LinkedinLoginController.swift */; };
+		2EB7C3AA1AA7374C00186235 /* connectSkillsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EB7C3A91AA7374C00186235 /* connectSkillsController.swift */; };
 		2EB964441A9CE78700082D51 /* defaultController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EB964431A9CE78700082D51 /* defaultController.swift */; };
 /* End PBXBuildFile section */
 
@@ -112,7 +116,6 @@
 		2E3434981AA2303A00475D36 /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
 		2E34349B1AA2304800475D36 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		2E34349E1AA2305400475D36 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
-		2E3434A11AA2306700475D36 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
 		2E3434A41AA2307400475D36 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		2E3434A81AA2308E00475D36 /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Bolts.framework; sourceTree = "<group>"; };
 		2E3434A91AA2308E00475D36 /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Parse.framework; sourceTree = "<group>"; };
@@ -120,18 +123,25 @@
 		2E3434AB1AA2308E00475D36 /* ParseFacebookUtils.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ParseFacebookUtils.framework; sourceTree = "<group>"; };
 		2E3434AC1AA2308E00475D36 /* ParseUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ParseUI.framework; sourceTree = "<group>"; };
 		2E3434B21AA230AF00475D36 /* MissingSkills-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "MissingSkills-Bridging-Header.h"; sourceTree = "<group>"; };
-		2E3434B31AA230B000475D36 /* ParseBridge.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ParseBridge.m; path = MissingSkills/ParseBridge.m; sourceTree = "<group>"; };
+		2E3434B31AA230B000475D36 /* ParseBridge.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ParseBridge.m; sourceTree = "<group>"; };
 		2E3434B51AA2317800475D36 /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
 		2E426F041A8EA55800A74684 /* Karweitjes.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Karweitjes.swift; sourceTree = "<group>"; };
 		2E426F061A8EA56E00A74684 /* DetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		2E426F081A8EA59300A74684 /* Colors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
 		2E426F0A1A8EA70300A74684 /* CustomCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomCell.swift; sourceTree = "<group>"; };
+		2E5D65FF1AA5E6DC003673B1 /* MissingSkills.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = MissingSkills.entitlements; sourceTree = "<group>"; };
+		2E8052EA1AA644B10034D787 /* jobsTable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = jobsTable.swift; sourceTree = "<group>"; };
+		2E8052EE1AA64B090034D787 /* JobsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JobsTableViewController.swift; sourceTree = "<group>"; };
+		2E848A2B1AA756E90022DE65 /* colorExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = colorExtension.swift; sourceTree = "<group>"; };
+		2E8840E51AA4B19B00C1E362 /* SWRevealViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SWRevealViewController.h; sourceTree = "<group>"; };
+		2E8840E61AA4B19B00C1E362 /* SWRevealViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWRevealViewController.m; sourceTree = "<group>"; };
 		2E9252A71A8E46D800B5AC55 /* WebViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebViewController.swift; sourceTree = "<group>"; };
 		2E9F93B41A8D47830088DAF9 /* LoginController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginController.swift; sourceTree = "<group>"; };
 		2E9F93BC1A8D55B10088DAF9 /* pageT1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pageT1.png; sourceTree = "<group>"; };
 		2E9F93BF1A8D5A470088DAF9 /* Slide.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Slide.swift; sourceTree = "<group>"; };
 		2E9F93C11A8D64B90088DAF9 /* logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = logo.png; sourceTree = "<group>"; };
 		2E9F93C31A8D716B0088DAF9 /* LinkedinLoginController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LinkedinLoginController.swift; sourceTree = "<group>"; };
+		2EB7C3A91AA7374C00186235 /* connectSkillsController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = connectSkillsController.swift; sourceTree = "<group>"; };
 		2EB964381A9CE37900082D51 /* OAuthSwift.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = OAuthSwift.xcodeproj; path = "../../../OAuthSwift-master 4/OAuthSwift.xcodeproj"; sourceTree = "<group>"; };
 		2EB964431A9CE78700082D51 /* defaultController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = defaultController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -143,7 +153,6 @@
 			files = (
 				2E3F11161AA27B0B00E16185 /* libsqlite3.dylib in Frameworks */,
 				2E3434A61AA2307C00475D36 /* SystemConfiguration.framework in Frameworks */,
-				2E3434A31AA2306E00475D36 /* StoreKit.framework in Frameworks */,
 				2E3434A01AA2305F00475D36 /* Security.framework in Frameworks */,
 				2E3434AD1AA2308E00475D36 /* Bolts.framework in Frameworks */,
 				2E34349D1AA2304E00475D36 /* QuartzCore.framework in Frameworks */,
@@ -172,7 +181,6 @@
 		2E07FDA51A852B2E001E2135 = {
 			isa = PBXGroup;
 			children = (
-				2E3434B31AA230B000475D36 /* ParseBridge.m */,
 				2E07FDB01A852B2E001E2135 /* MissingSkills */,
 				2E07FDC81A852B2E001E2135 /* MissingSkillsTests */,
 				2E07FDAF1A852B2E001E2135 /* Products */,
@@ -192,6 +200,7 @@
 		2E07FDB01A852B2E001E2135 /* MissingSkills */ = {
 			isa = PBXGroup;
 			children = (
+				2E5D65FF1AA5E6DC003673B1 /* MissingSkills.entitlements */,
 				2E3434861AA22FA800475D36 /* Frameworks */,
 				2E9F93BE1A8D5A370088DAF9 /* UIKitExtentions */,
 				2E9F93B31A8D47420088DAF9 /* Controllers */,
@@ -202,8 +211,10 @@
 				2E07FDBE1A852B2E001E2135 /* LaunchScreen.xib */,
 				2E07FDB11A852B2E001E2135 /* Supporting Files */,
 				2E426F041A8EA55800A74684 /* Karweitjes.swift */,
+				2E848A2B1AA756E90022DE65 /* colorExtension.swift */,
 				2E426F081A8EA59300A74684 /* Colors.swift */,
 				2E426F0A1A8EA70300A74684 /* CustomCell.swift */,
+				2E8052EA1AA644B10034D787 /* jobsTable.swift */,
 			);
 			path = MissingSkills;
 			sourceTree = "<group>";
@@ -300,10 +311,12 @@
 		2E3434861AA22FA800475D36 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				2E3434B31AA230B000475D36 /* ParseBridge.m */,
+				2E8840E51AA4B19B00C1E362 /* SWRevealViewController.h */,
+				2E8840E61AA4B19B00C1E362 /* SWRevealViewController.m */,
 				2E3434B51AA2317800475D36 /* libsqlite3.dylib */,
 				2E3434A71AA2308E00475D36 /* parse-library-1.6.3 */,
 				2E3434A41AA2307400475D36 /* SystemConfiguration.framework */,
-				2E3434A11AA2306700475D36 /* StoreKit.framework */,
 				2E34349E1AA2305400475D36 /* Security.framework */,
 				2E34349B1AA2304800475D36 /* QuartzCore.framework */,
 				2E3434981AA2303A00475D36 /* MobileCoreServices.framework */,
@@ -340,7 +353,9 @@
 				2E9F93B41A8D47830088DAF9 /* LoginController.swift */,
 				2E9F93C31A8D716B0088DAF9 /* LinkedinLoginController.swift */,
 				2E9252A71A8E46D800B5AC55 /* WebViewController.swift */,
+				2E8052EE1AA64B090034D787 /* JobsTableViewController.swift */,
 				2EB964431A9CE78700082D51 /* defaultController.swift */,
+				2EB7C3A91AA7374C00186235 /* connectSkillsController.swift */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -412,6 +427,15 @@
 				TargetAttributes = {
 					2E07FDAD1A852B2E001E2135 = {
 						CreatedOnToolsVersion = 6.2;
+						DevelopmentTeam = HEZ8F5MC4B;
+						SystemCapabilities = {
+							com.apple.InAppPurchase = {
+								enabled = 0;
+							};
+							com.apple.Passbook = {
+								enabled = 0;
+							};
+						};
 					};
 					2E07FDC41A852B2E001E2135 = {
 						CreatedOnToolsVersion = 6.2;
@@ -491,10 +515,14 @@
 				2E426F051A8EA55800A74684 /* Karweitjes.swift in Sources */,
 				2E07FDED1A8530BB001E2135 /* SettingsController.swift in Sources */,
 				2E426F0B1A8EA70300A74684 /* CustomCell.swift in Sources */,
+				2E848A2C1AA756E90022DE65 /* colorExtension.swift in Sources */,
+				2E8840E71AA4B19B00C1E362 /* SWRevealViewController.m in Sources */,
 				2E07FDB81A852B2E001E2135 /* UserController.swift in Sources */,
 				2E07FDE81A852D4B001E2135 /* RAMAnimatedTabBarController.swift in Sources */,
 				2E9F93B51A8D47830088DAF9 /* LoginController.swift in Sources */,
 				2E3434B41AA230B000475D36 /* ParseBridge.m in Sources */,
+				2EB7C3AA1AA7374C00186235 /* connectSkillsController.swift in Sources */,
+				2E8052EB1AA644B10034D787 /* jobsTable.swift in Sources */,
 				2E07FDEB1A852F62001E2135 /* SkillCoinsController.swift in Sources */,
 				2E07FDB41A852B2E001E2135 /* AppDelegate.swift in Sources */,
 				2E07FDE71A852D4B001E2135 /* RAMTransitionItemAnimation.swift in Sources */,
@@ -508,6 +536,7 @@
 				2E07FDE51A852D4B001E2135 /* RAMFumeAnimation.swift in Sources */,
 				2E9F93C41A8D716B0088DAF9 /* LinkedinLoginController.swift in Sources */,
 				2E07FDE31A852D4B001E2135 /* RAMBounceAnimation.swift in Sources */,
+				2E8052EF1AA64B090034D787 /* JobsTableViewController.swift in Sources */,
 				2EB964441A9CE78700082D51 /* defaultController.swift in Sources */,
 				2E9252A81A8E46D800B5AC55 /* WebViewController.swift in Sources */,
 			);
@@ -638,13 +667,17 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/MissingSkills/parse-library-1.6.3",
 				);
 				INFOPLIST_FILE = MissingSkills/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "MissingSkills-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
@@ -655,13 +688,17 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/MissingSkills/parse-library-1.6.3",
 				);
 				INFOPLIST_FILE = MissingSkills/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "MissingSkills-Bridging-Header.h";
 			};
 			name = Release;

@@ -34,11 +34,12 @@ class LoginController: UIViewController
         view.addGestureRecognizer(rightSwipe)
 
     }
-    
+        
     func handleSwipes(sender:UISwipeGestureRecognizer) {
         if (sender.direction == .Left) {
             curSlide++;
             if(curSlide < tips.count) {
+                
                 self.slidingTextLabel.slideInFromRight()
                 self.slidingTextLabel.text = tips[curSlide];
                 
@@ -68,10 +69,10 @@ class LoginController: UIViewController
                 curSlide = tips.count - 1;
             }
             
-            self.slidingTextLabel.slideInFromRight()
+            self.slidingTextLabel.slideInFromLeft()
             self.slidingTextLabel.text = tips[curSlide];
             
-            self.slidingTitleLabel.slideInFromRight()
+            self.slidingTitleLabel.slideInFromLeft()
             self.slidingTitleLabel.text = tipstitle[curSlide];
             
             pagec.currentPage = curSlide;

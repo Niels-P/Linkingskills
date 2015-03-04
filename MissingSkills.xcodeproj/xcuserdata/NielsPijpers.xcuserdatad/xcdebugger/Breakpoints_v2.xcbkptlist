@@ -10,11 +10,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "MissingSkills/ChoresController.swift"
-            timestampString = "446898169.51025"
+            timestampString = "447000067.973063"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "27"
-            endingLineNumber = "27"
+            startingLineNumber = "26"
+            endingLineNumber = "26"
             landmarkName = "ChoresController"
             landmarkType = "3">
          </BreakpointContent>
@@ -58,13 +58,13 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "MissingSkills/LinkedinLoginController.swift"
-            timestampString = "446931220.716633"
+            timestampString = "447181220.488383"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "97"
-            endingLineNumber = "97"
-            landmarkName = "loginUser(_:)"
-            landmarkType = "5">
+            startingLineNumber = "150"
+            endingLineNumber = "150"
+            landmarkName = "LinkedinLoginController"
+            landmarkType = "3">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -74,11 +74,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "MissingSkills/LinkedinLoginController.swift"
-            timestampString = "446931220.716633"
+            timestampString = "447181220.488383"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "123"
-            endingLineNumber = "123"
+            startingLineNumber = "176"
+            endingLineNumber = "176"
             landmarkName = "parser(_:foundCharacters:)"
             landmarkType = "5">
          </BreakpointContent>
@@ -89,14 +89,14 @@
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "MissingSkills/ChoresController.swift"
-            timestampString = "446931254.79749"
+            filePath = "MissingSkills/defaultController.swift"
+            timestampString = "447106086.548434"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "42"
-            endingLineNumber = "42"
-            landmarkName = "viewDidAppear(_:)"
-            landmarkType = "5">
+            startingLineNumber = "11"
+            endingLineNumber = "11"
+            landmarkName = "defaultController"
+            landmarkType = "3">
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

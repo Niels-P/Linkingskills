@@ -22,6 +22,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UIWebViewDelegate {
         UITabBarItem.appearance().setTitleTextAttributes([NSForegroundColorAttributeName: UIColor.redColor()], forState:.Selected)
         UIApplication.sharedApplication().statusBarStyle = UIStatusBarStyle.LightContent
         
+        Parse.enableLocalDatastore()
         Parse.setApplicationId("lei67QowffEix6q5x8V35L0lgC7N83WLCpGEruIB", clientKey: "EM5Sz9nFJFNZADV7MOYIx1TXWfRoaVH3xrHoTSBq")
         
         if application.respondsToSelector("registerUserNotificationSettings:") {
@@ -36,6 +37,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UIWebViewDelegate {
             // Register for Push Notifications before iOS 8
             application.registerForRemoteNotificationTypes(.Alert | .Badge | .Sound)
         }
+
         
         return true
     }
@@ -52,7 +54,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UIWebViewDelegate {
     }
     
     func application(application: UIApplication, didFailToRegisterForRemoteNotificationsWithError error: NSError) {
-        println("failed to register for remote notifications:  (error)")
+        println("failed to register for remote notifications: \(error) (error)")
     }
     
     func application(application: UIApplication, didReceiveRemoteNotification userInfo: [NSObject : AnyObject]) {

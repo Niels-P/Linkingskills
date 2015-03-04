@@ -21,10 +21,16 @@ class LinkedinLoginController: UIViewController, NSXMLParserDelegate {
     var skills = NSMutableArray()
     var imageurl = NSMutableString()
     
+    @IBOutlet weak var doLink: UIButton!
+    @IBAction func doLink(sender: AnyObject) {
+        doOAuthLinkedin()
+    }
     @IBOutlet weak var labelName: UILabel!
     @IBOutlet weak var labelProgress: UILabel!
+    @IBOutlet weak var indicator: UIActivityIndicatorView!
     
     override func viewDidLoad() {
+        self.doLink.hidden = true;
         super.viewDidLoad()
         doOAuthLinkedin()
     }
@@ -34,6 +40,12 @@ class LinkedinLoginController: UIViewController, NSXMLParserDelegate {
     }
     
     func doOAuthLinkedin(){
+        self.labelProgress.text = "";
+        self.doLink.hidden = true;
+        self.labelName.text = ""
+        self.labelName.textColor = UIColor.whiteColor()
+        self.labelProgress.textColor = UIColor.whiteColor()
+        
         labelProgress.text = "Verbinden met LinkedIn";
         let oauthswift = OAuth1Swift(
             consumerKey:    "77id0z47h7yy9p",
@@ -45,38 +57,72 @@ class LinkedinLoginController: UIViewController, NSXMLParserDelegate {
         oauthswift.authorizeWithCallbackURL( NSURL(string: "oauth-swift://oauth-callback/linkedin")!, success: {
             credential, response in
             self.storeTokens("Linkedin", token: "\(credential.oauth_token)", secret: "\(credential.oauth_token_secret)")
-            println("Token BELANGRIJK: \(credential.oauth_token)");
-            println("Secret BELANGRIJK: \(credential.oauth_token_secret)");
+            
+            /*
+            Reset labels etc.
+            */
+            self.doLink.hidden = true;
+            self.labelName.hidden = true;
+            self.labelProgress.hidden = true;
+            self.indicator.hidden = false;
+            
+            self.labelProgress.text = "Even geduld AUB.";
+            self.labelName.text = ""
+            self.labelName.textColor = UIColor.whiteColor()
+            self.labelProgress.textColor = UIColor.whiteColor()
+            self.labelName.hidden = false;
+            self.labelProgress.hidden = false;
+            
             var parameters =  Dictionary<String, AnyObject>()
             oauthswift.client.get("https://api.linkedin.com/v1/people/~:(skills,first-name,last-name,picture-url)", parameters: parameters,
                 success: {
                     data, response in
-                    println("PARAMETERS: \(parameters)");
+                    
                     let dataString = NSString(data: data, encoding: NSUTF8StringEncoding)
                     println(parameters);
                     self.loginUser(dataString!);
-                    var prefs:NSUserDefaults = NSUserDefaults.standardUserDefaults()
-                    prefs.setInteger(1, forKey: "ISLOGIN")
-                    prefs.synchronize()
+
                 }, failure: {(error:NSError!) -> Void in
                     println(error)
             })
             }, failure: {(error:NSError!) -> Void in
+                self.doLink.hidden = false;
+                self.labelName.hidden = true;
+                self.labelProgress.hidden = true;
+                self.indicator.hidden = true;
+                
+                self.labelProgress.text = "Autorisatie opvragen mislukt.";
+                self.labelName.text = "Fout opgetreden"
+                self.labelName.textColor = UIColor.redColor()
+                self.labelProgress.textColor = UIColor.redColor()
+                self.labelName.hidden = false;
+                self.labelProgress.hidden = false;
                 println(error.localizedDescription)
+                
         })
     }
     
     
     func storeTokens(title: String, token: String, secret: String) {
         var object = PFObject(className: "users")
-        var uuid = NSUUID().UUIDString
+        var uuid = UIDevice.currentDevice().identifierForVendor.UUIDString
         object.addObject(uuid, forKey: "uuid")
         object.addObject(token, forKey: "oauth_token")
         object.addObject(secret, forKey: "oauth_toke_secret")
-        object.save()
+        object.saveInBackgroundWithBlock { (success, error) -> Void in
+            if success {
+                var ojId = object.objectId
+                var prefs:NSUserDefaults = NSUserDefaults.standardUserDefaults()
+                prefs.setValue(token, forKey: "token")
+                prefs.setValue(ojId, forKey: "user");
+                prefs.setValue(secret, forKey: "secret")
+                prefs.synchronize()
+            }}
     }
     
     func loginUser(data: String) {
+
+        
         var mydata:NSData = data.dataUsingEncoding(NSUTF8StringEncoding, allowLossyConversion: true)!
         posts = []
         var xmlParser = NSXMLParser(data: mydata)
@@ -84,7 +130,13 @@ class LinkedinLoginController: UIViewController, NSXMLParserDelegate {
         xmlParser.parse()
         
         var voornaam = posts.objectAtIndex(0).valueForKey("voornaam") as NSString;
+        var skills =  (posts.objectAtIndex(0).valueForKey("skills") as NSArray) as Array
         var achternaam = posts.objectAtIndex(0).valueForKey("achternaam") as NSString;
+        
+        var prefs:NSUserDefaults = NSUserDefaults.standardUserDefaults()
+        prefs.setValue(skills, forKey: "skills")
+        prefs.synchronize()
+        
         labelName.text = "Hallo \(voornaam) \(achternaam)";
         labelProgress.text = "Profiel geladen...";
         

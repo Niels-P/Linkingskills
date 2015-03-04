@@ -10,7 +10,6 @@ import UIKit
 import OAuthSwift
 
 class ChoresController: UIViewController, UITableViewDataSource, UITableViewDelegate {
-    var loggedIn = 0;
     var arrayOfKarweitjes: [Karweitjes] = [Karweitjes]()
     @IBOutlet weak var myTableView: UITableView!
 
@@ -27,36 +26,50 @@ class ChoresController: UIViewController, UITableViewDataSource, UITableViewDele
     
     override func viewDidAppear(animated: Bool) {
         self.performSegueWithIdentifier("goto_login", sender: self)
-        //let prefs:NSUserDefaults = NSUserDefaults.standardUserDefaults()
+
+        var prefs:NSUserDefaults = NSUserDefaults.standardUserDefaults()
+
+        if(prefs.stringForKey("token") != nil || prefs.stringForKey("secret") != nil ) {
+            println(prefs.stringForKey("token"))
+            println(prefs.stringForKey("secret"))
+            startController();
+        } else {
+            self.performSegueWithIdentifier("goto_login", sender: self)
+        }
         
+        super.viewWillAppear(false);
+        UITabBar.appearance().backgroundColor = UIColor.yellowColor();
+    }
+    
+    func startController() {
         /*
+        var prefs:NSUserDefaults = NSUserDefaults.standardUserDefaults()
+        prefs.setInteger(1, forKey: "ISLOGIN")
+        prefs.synchronize()
+        
+        
         let oauthswift = OAuth1Swift(
-            consumerKey:    "77id0z47h7yy9p",
-            consumerSecret: "qBtL6w7JWTZyFRb7",
-            requestTokenUrl: "https://api.linkedin.com/uas/oauth/requestToken",
-            authorizeUrl:    "https://api.linkedin.com/uas/oauth/authenticate",
-            accessTokenUrl:  "https://api.linkedin.com/uas/oauth/accessToken"
+        consumerKey:    "77id0z47h7yy9p",
+        consumerSecret: "qBtL6w7JWTZyFRb7",
+        requestTokenUrl: "https://api.linkedin.com/uas/oauth/requestToken",
+        authorizeUrl:    "https://api.linkedin.com/uas/oauth/authenticate",
+        accessTokenUrl:  "https://api.linkedin.com/uas/oauth/accessToken"
         )
         
         var parameters =  Dictionary<String, AnyObject>()
         oauthswift.client.setUserDetails("e5fd7c9b-f82e-4912-8536-03694c307cdf", secret: "b7b2c0a3-9183-43ec-ba17-9edc4f958f9c", parameters: parameters)
         
         oauthswift.client.get("https://api.linkedin.com/v1/people/~:(skills,first-name,last-name,picture-url)", parameters: parameters,
-            success: {
-                data, response in
-                println("PARAMETERS: \(parameters)");
-                let dataString = NSString(data: data, encoding: NSUTF8StringEncoding)
-                println(parameters);
-                println(dataString);
-                var prefs:NSUserDefaults = NSUserDefaults.standardUserDefaults()
-                prefs.setInteger(1, forKey: "ISLOGIN")
-                prefs.synchronize()
-            }, failure: {(error:NSError!) -> Void in
-                println(error)
-        })*/
+        success: {
+        data, response in
+        println("PARAMETERS: \(parameters)");
+        let dataString = NSString(data: data, encoding: NSUTF8StringEncoding)
+        println(parameters);
+        println(dataString);
+        }, failure: {(error:NSError!) -> Void in
+        println(error)
+        }) */
         
-        super.viewWillAppear(false);
-        UITabBar.appearance().backgroundColor = UIColor.yellowColor();
     }
     
     func setKarweitjes() {
