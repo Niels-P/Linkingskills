@@ -46,6 +46,11 @@
 		2E79BEAF1AA8BD8500416ABF /* choresv_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 2E79BEAB1AA8BD8500416ABF /* choresv_icon.png */; };
 		2E79BEB31AA8C5BD00416ABF /* coinv_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 2E79BEB11AA8C5BD00416ABF /* coinv_icon.png */; };
 		2E79BEB41AA8C5BD00416ABF /* settingv_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 2E79BEB21AA8C5BD00416ABF /* settingv_icon.png */; };
+		2E79BEBF1AA8FF8400416ABF /* easy.png in Resources */ = {isa = PBXBuildFile; fileRef = 2E79BEBC1AA8FF8400416ABF /* easy.png */; };
+		2E79BEC01AA8FF8400416ABF /* hard.png in Resources */ = {isa = PBXBuildFile; fileRef = 2E79BEBD1AA8FF8400416ABF /* hard.png */; };
+		2E79BEC11AA8FF8400416ABF /* medium.png in Resources */ = {isa = PBXBuildFile; fileRef = 2E79BEBE1AA8FF8400416ABF /* medium.png */; };
+		2E79BEC31AA9009400416ABF /* Coins.png in Resources */ = {isa = PBXBuildFile; fileRef = 2E79BEC21AA9009400416ABF /* Coins.png */; };
+		2E79BEC51AA9048400416ABF /* Line.png in Resources */ = {isa = PBXBuildFile; fileRef = 2E79BEC41AA9048400416ABF /* Line.png */; };
 		2E8052EB1AA644B10034D787 /* jobsTable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E8052EA1AA644B10034D787 /* jobsTable.swift */; };
 		2E8052EF1AA64B090034D787 /* JobsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E8052EE1AA64B090034D787 /* JobsTableViewController.swift */; };
 		2E848A2C1AA756E90022DE65 /* colorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E848A2B1AA756E90022DE65 /* colorExtension.swift */; };
@@ -140,6 +145,11 @@
 		2E79BEAB1AA8BD8500416ABF /* choresv_icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = choresv_icon.png; sourceTree = "<group>"; };
 		2E79BEB11AA8C5BD00416ABF /* coinv_icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = coinv_icon.png; sourceTree = "<group>"; };
 		2E79BEB21AA8C5BD00416ABF /* settingv_icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = settingv_icon.png; sourceTree = "<group>"; };
+		2E79BEBC1AA8FF8400416ABF /* easy.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = easy.png; sourceTree = "<group>"; };
+		2E79BEBD1AA8FF8400416ABF /* hard.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = hard.png; sourceTree = "<group>"; };
+		2E79BEBE1AA8FF8400416ABF /* medium.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = medium.png; sourceTree = "<group>"; };
+		2E79BEC21AA9009400416ABF /* Coins.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Coins.png; sourceTree = "<group>"; };
+		2E79BEC41AA9048400416ABF /* Line.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Line.png; sourceTree = "<group>"; };
 		2E8052EA1AA644B10034D787 /* jobsTable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = jobsTable.swift; sourceTree = "<group>"; };
 		2E8052EE1AA64B090034D787 /* JobsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JobsTableViewController.swift; sourceTree = "<group>"; };
 		2E848A2B1AA756E90022DE65 /* colorExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = colorExtension.swift; sourceTree = "<group>"; };
@@ -234,6 +244,11 @@
 		2E07FDB11A852B2E001E2135 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				2E79BEBC1AA8FF8400416ABF /* easy.png */,
+				2E79BEC21AA9009400416ABF /* Coins.png */,
+				2E79BEC41AA9048400416ABF /* Line.png */,
+				2E79BEBD1AA8FF8400416ABF /* hard.png */,
+				2E79BEBE1AA8FF8400416ABF /* medium.png */,
 				2E79BEA91AA8BD8500416ABF /* userv_icon.png */,
 				2E79BEB11AA8C5BD00416ABF /* coinv_icon.png */,
 				2E79BEB21AA8C5BD00416ABF /* settingv_icon.png */,
@@ -510,9 +525,14 @@
 			files = (
 				2E79BEB31AA8C5BD00416ABF /* coinv_icon.png in Resources */,
 				2E07FDBB1A852B2E001E2135 /* Main.storyboard in Resources */,
+				2E79BEC01AA8FF8400416ABF /* hard.png in Resources */,
+				2E79BEC51AA9048400416ABF /* Line.png in Resources */,
 				2E9F93C21A8D64B90088DAF9 /* logo.png in Resources */,
+				2E79BEC11AA8FF8400416ABF /* medium.png in Resources */,
 				2E07FDC01A852B2E001E2135 /* LaunchScreen.xib in Resources */,
 				2E848A311AA794000022DE65 /* delete.png in Resources */,
+				2E79BEC31AA9009400416ABF /* Coins.png in Resources */,
+				2E79BEBF1AA8FF8400416ABF /* easy.png in Resources */,
 				2E07FDBD1A852B2E001E2135 /* Images.xcassets in Resources */,
 				2E79BEAD1AA8BD8500416ABF /* userv_icon.png in Resources */,
 				2E9F93BD1A8D55B10088DAF9 /* pageT1.png in Resources */,

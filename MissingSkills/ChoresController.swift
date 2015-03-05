@@ -16,9 +16,13 @@ class ChoresController: UIViewController, UITableViewDataSource, UITableViewDele
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        myTableView.separatorStyle = UITableViewCellSeparatorStyle.SingleLine
+        myTableView.separatorInset = UIEdgeInsetsZero
+
     }
     
-    func positionForBar(bar: UIBarPositioning) -> UIBarPosition {
+    func positionForBar(bar: UIBarPositioning) -> UIBarPosition
+    {
         return .TopAttached
     }
     
@@ -64,13 +68,23 @@ class ChoresController: UIViewController, UITableViewDataSource, UITableViewDele
             if error == nil {
                 if let objects = objects as? [PFObject] {
                     for object in objects {
-                        if(object.valueForKey("userid") == nil) {
+                        if(object.valueForKey("userid") == nil)
+                        {
                             var arraySkills = (object.valueForKey("skills") as NSArray) as NSMutableArray
                             for skills in filterSkills {
                                 if(arraySkills.containsObject(skills)) {
                                     var name = object.valueForKey("name") as String
                                     var descrip = object.valueForKey("descr") as String
-                                    var karweitje = Karweitjes(name: name, description: descrip);
+                                    var coins: AnyObject? =  object.valueForKey("coins");
+                                    var deadline: AnyObject? =  object.valueForKey("deadline");
+                                    var difficulty: AnyObject? =  object.valueForKey("grade");
+                                    var deadl = "\(deadline!)"
+                                    println(deadl);
+                                    var coin:String = "\(coins!)"
+                                    var grade = "\(difficulty!)"
+                                    
+                                    
+                                    var karweitje = Karweitjes(name: name, description: descrip, coins: coin, deadline: deadl, grade: grade);
                                     self.arrayOfKarweitjes.append(karweitje);
                                     self.myTableView.reloadData();
                                 }
@@ -86,6 +100,7 @@ class ChoresController: UIViewController, UITableViewDataSource, UITableViewDele
         }
     }
     
+    
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return arrayOfKarweitjes.count
     }
@@ -96,30 +111,24 @@ class ChoresController: UIViewController, UITableViewDataSource, UITableViewDele
         let karweitje = arrayOfKarweitjes[indexPath.row]
         cell.frame=CGRectMake(44,0,tableView.bounds.size.width,44)
         if(indexPath.row % 2 == 0) {
-            cell.backgroundColor = UIColor.whiteColor()
-            let rgb: CGColorSpaceRef = CGColorSpaceCreateDeviceRGB()
-            let black: [CGFloat]   = [0.0, 0.0, 0.0, 1.0]
-            
-            cell.layer.shadowColor = CGColorCreate(rgb, black)
-            cell.layer.shadowOpacity = 1;
-            cell.layer.shadowRadius = 10;
-            cell.layer.shadowOffset = CGSizeMake(-2, 7)
+            cell.backgroundColor = UIColor(red: 244.0/255.0, green: 244.0/255.0, blue: 244.0/255.0, alpha: 1.0)
             
         } else {
-            cell.backgroundColor = UIColor.whiteColor()
-            let rgb: CGColorSpaceRef = CGColorSpaceCreateDeviceRGB()
-            let black: [CGFloat]   = [0.0, 0.0, 0.0, 1.0]
-            
-            cell.layer.shadowColor = CGColorCreate(rgb, black)
-            cell.layer.shadowOpacity = 1;
-            cell.layer.shadowRadius = 10;
-            cell.layer.shadowOffset = CGSizeMake(-2, 7)
+            cell.backgroundColor = UIColor(red: 244.0/255.0, green: 244.0/255.0, blue: 244.0/255.0, alpha: 1.0)
         }
         
-        cell.setCell(karweitje.name, description: karweitje.description);
+        cell.setCell(karweitje.name, description: karweitje.description, coins: karweitje.coins, deadline: karweitje.deadline, grade: karweitje.grade);
         println(karweitje.name);
         return cell;
     }
+    
+    func tableView(tableView: UITableView, willDisplayCell cell: UITableViewCell, forRowAtIndexPath indexPath: NSIndexPath) {
+        cell.separatorInset = UIEdgeInsetsZero
+        cell.layoutMargins = UIEdgeInsetsZero
+        cell.preservesSuperviewLayoutMargins = false
+    }
+    
+    
     
     func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
         println("test");
@@ -138,7 +147,6 @@ class ChoresController: UIViewController, UITableViewDataSource, UITableViewDele
         detailedViewController.nameString = karweitje.name;
         
         println("test");
-
         
         self.presentViewController(detailedViewController, animated: true, completion: nil)
     }

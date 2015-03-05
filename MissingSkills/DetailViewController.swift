@@ -11,21 +11,22 @@ import UIKit
 class DetailViewController: UIViewController {
     
     @IBOutlet weak var nameController: UILabel!
+    @IBOutlet weak var navBar: UINavigationBar!
     
     var nameString: String?
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+
         self.nameController.text = nameString;
     }
     
-    @IBAction func backButton(sender: AnyObject) {
-        let KarweitjesController: ChoresController = self.storyboard?.instantiateViewControllerWithIdentifier("KarweitjesController") as ChoresController
-        
-        
-        self.presentViewController(KarweitjesController, animated: true, completion: nil)
-        
+    func viewWillAppear() {
+        navigationItem.title = "Count:"
+    }
+    
+    func positionForBar(bar: UIBarPositioning) -> UIBarPosition {
+        return .TopAttached
     }
     
     override func didReceiveMemoryWarning() {
