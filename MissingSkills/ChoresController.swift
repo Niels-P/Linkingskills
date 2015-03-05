@@ -40,7 +40,6 @@ class ChoresController: UIViewController, UITableViewDataSource, UITableViewDele
     }
     
     func startController() {
-        /*
         var prefs:NSUserDefaults = NSUserDefaults.standardUserDefaults()
         prefs.setInteger(1, forKey: "ISLOGIN")
         prefs.synchronize()
@@ -55,19 +54,18 @@ class ChoresController: UIViewController, UITableViewDataSource, UITableViewDele
         )
         
         var parameters =  Dictionary<String, AnyObject>()
-        oauthswift.client.setUserDetails("e5fd7c9b-f82e-4912-8536-03694c307cdf", secret: "b7b2c0a3-9183-43ec-ba17-9edc4f958f9c", parameters: parameters)
+        oauthswift.client.setUserDetails(prefs.stringForKey("token")!, secret: prefs.stringForKey("secret")!, parameters: parameters)
         
         oauthswift.client.get("https://api.linkedin.com/v1/people/~:(skills,first-name,last-name,picture-url)", parameters: parameters,
         success: {
-        data, response in
-        println("PARAMETERS: \(parameters)");
-        let dataString = NSString(data: data, encoding: NSUTF8StringEncoding)
-        println(parameters);
-        println(dataString);
+            data, response in
+            println("PARAMETERS: \(parameters)");
+            let dataString = NSString(data: data, encoding: NSUTF8StringEncoding)
+            println(parameters);
+            println(dataString);
         }, failure: {(error:NSError!) -> Void in
-        println(error)
-        }) */
-        
+            println(error)
+        })
     }
     
     func setKarweitjes() {

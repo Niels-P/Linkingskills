@@ -168,9 +168,6 @@ class connectSkillsController: UIViewController, NSXMLParserDelegate, UITableVie
         }
     }
     
-    
-
-    
     func positionForBar(bar: UIBarPositioning) -> UIBarPosition {
         return .TopAttached
     }
