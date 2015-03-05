@@ -100,7 +100,7 @@
                                     </tableViewCell>
                                 </prototypes>
                                 <variation key="heightClass=regular-widthClass=compact" misplaced="YES">
-                                    <rect key="frame" x="-2" y="56" width="602" height="651"/>
+                                    <rect key="frame" x="-1" y="-54" width="401" height="805"/>
                                 </variation>
                                 <connections>
                                     <outlet property="dataSource" destination="9pv-A4-QxB" id="pB1-nD-veO"/>
@@ -119,14 +119,14 @@
                             <constraint firstItem="pV8-yt-qeE" firstAttribute="top" secondItem="2LO-Ll-ZbZ" secondAttribute="bottom" constant="-107" id="vnF-pO-lYv"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Chores" image="first" id="acW-dT-cKf" customClass="RAMAnimatedTabBarItem" customModule="MissingSkills" customModuleProvider="target">
+                    <tabBarItem key="tabBarItem" title="Chores" image="choresv_icon.png" id="acW-dT-cKf" customClass="RAMAnimatedTabBarItem" customModule="MissingSkills" customModuleProvider="target">
                         <userDefinedRuntimeAttributes>
                             <userDefinedRuntimeAttribute type="color" keyPath="textColor">
                                 <color key="value" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </userDefinedRuntimeAttribute>
                         </userDefinedRuntimeAttributes>
                         <connections>
-                            <outlet property="animation" destination="zsX-EU-Vyn" id="AQT-6M-ocV"/>
+                            <outlet property="animation" destination="FlV-5s-4TC" id="If3-Rc-DaH"/>
                         </connections>
                     </tabBarItem>
                     <connections>
@@ -135,9 +135,9 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="W5J-7L-Pyd" sceneMemberID="firstResponder"/>
-                <customObject id="zsX-EU-Vyn" customClass="RAMFlipLeftTransitionItemAniamtions" customModule="MissingSkills" customModuleProvider="target"/>
+                <customObject id="FlV-5s-4TC" customClass="RAMFlipTopTransitionItemAniamtions" customModule="MissingSkills" customModuleProvider="target"/>
             </objects>
-            <point key="canvasLocation" x="937.5" y="-241.9014084507042"/>
+            <point key="canvasLocation" x="937.5" y="-242.25"/>
         </scene>
         <!--Profile-->
         <scene sceneID="wg7-f3-ORb">
@@ -156,6 +156,9 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
+                                <variation key="heightClass=regular-widthClass=compact" misplaced="YES">
+                                    <rect key="frame" x="92" y="427" width="215.5" height="17"/>
+                                </variation>
                             </label>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" misplaced="YES" text="Profile" textAlignment="center" lineBreakMode="tailTruncation" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="zEq-FU-wV5">
                                 <rect key="frame" x="52" y="271" width="209.5" height="41.5"/>
@@ -163,6 +166,9 @@
                                 <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="36"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
+                                <variation key="heightClass=regular-widthClass=compact" misplaced="YES">
+                                    <rect key="frame" x="149" y="378" width="102.5" height="41.5"/>
+                                </variation>
                             </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
@@ -173,14 +179,14 @@
                             <constraint firstAttribute="centerY" secondItem="zEq-FU-wV5" secondAttribute="centerY" id="qzY-Ky-pLD"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Profile" image="second" id="cPa-gy-q4n" customClass="RAMAnimatedTabBarItem" customModule="MissingSkills" customModuleProvider="target">
+                    <tabBarItem key="tabBarItem" title="Profile" image="userv_icon.png" id="cPa-gy-q4n" customClass="RAMAnimatedTabBarItem" customModule="MissingSkills" customModuleProvider="target">
                         <userDefinedRuntimeAttributes>
                             <userDefinedRuntimeAttribute type="color" keyPath="textColor">
                                 <color key="value" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </userDefinedRuntimeAttribute>
                         </userDefinedRuntimeAttributes>
                         <connections>
-                            <outlet property="animation" destination="M8t-Za-rax" id="nuI-3C-DOD"/>
+                            <outlet property="animation" destination="M8t-Za-rax" id="bUJ-Rz-qRR"/>
                         </connections>
                     </tabBarItem>
                 </viewController>
@@ -326,8 +332,7 @@ With skillcoins you can buy discount for study’s or complete courses that can 
                                         <exclude reference="qY2-vq-ddA"/>
                                     </mask>
                                 </variation>
-                                <variation key="heightClass=regular-widthClass=compact" misplaced="YES">
-                                    <rect key="frame" x="237" y="293" width="126" height="30"/>
+                                <variation key="heightClass=regular-widthClass=compact">
                                     <mask key="constraints">
                                         <include reference="qY2-vq-ddA"/>
                                     </mask>
@@ -486,7 +491,9 @@ B. Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem
                     <tabBar key="tabBar" contentMode="scaleToFill" id="W28-zg-YXA">
                         <rect key="frame" x="0.0" y="975" width="768" height="49"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
-                        <color key="barTintColor" red="0.1143025434" green="0.56277728110000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="barTintColor" red="0.12941176469999999" green="0.3294117647" blue="0.60784313729999995" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="selectedImageTintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </tabBar>
                     <connections>
                         <segue destination="9pv-A4-QxB" kind="relationship" relationship="viewControllers" id="u7Y-xg-7CH"/>
@@ -517,12 +524,18 @@ B. Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem
                                 <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="36"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
+                                <variation key="heightClass=regular-widthClass=compact" misplaced="YES">
+                                    <rect key="frame" x="115" y="378" width="169.5" height="41.5"/>
+                                </variation>
                             </label>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Third view" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5gc-ZC-33e">
                                 <rect key="frame" x="53" y="326" width="215.5" height="17"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
+                                <variation key="heightClass=regular-widthClass=compact" misplaced="YES">
+                                    <rect key="frame" x="167" y="427" width="66" height="17"/>
+                                </variation>
                             </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
@@ -533,7 +546,7 @@ B. Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem
                             <constraint firstItem="5gc-ZC-33e" firstAttribute="top" secondItem="SPM-Tg-LfA" secondAttribute="bottom" constant="8" symbolic="YES" id="hNl-04-FTE"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="SkillCoins" image="second" id="C4C-7d-LOJ" customClass="RAMAnimatedTabBarItem" customModule="MissingSkills" customModuleProvider="target">
+                    <tabBarItem key="tabBarItem" title="SkillCoins" image="coinv_icon.png" id="C4C-7d-LOJ" customClass="RAMAnimatedTabBarItem" customModule="MissingSkills" customModuleProvider="target">
                         <userDefinedRuntimeAttributes>
                             <userDefinedRuntimeAttribute type="color" keyPath="textColor">
                                 <color key="value" red="0.95728249529999998" green="1" blue="0.96756222179999996" alpha="1" colorSpace="calibratedRGB"/>
@@ -567,12 +580,18 @@ B. Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem
                                 <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="36"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
+                                <variation key="heightClass=regular-widthClass=compact" misplaced="YES">
+                                    <rect key="frame" x="89" y="378" width="220.5" height="41.5"/>
+                                </variation>
                             </label>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Settings" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qEu-ON-EX9">
                                 <rect key="frame" x="49" y="333" width="215.5" height="17"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
+                                <variation key="heightClass=regular-widthClass=compact" misplaced="YES">
+                                    <rect key="frame" x="173" y="427" width="53" height="17"/>
+                                </variation>
                             </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
@@ -583,7 +602,7 @@ B. Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem
                             <constraint firstAttribute="centerX" secondItem="zhK-vR-0KZ" secondAttribute="centerX" id="cgG-Dw-FI4"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Settings" image="second" id="ujR-Er-dnO" customClass="RAMAnimatedTabBarItem" customModule="MissingSkills" customModuleProvider="target">
+                    <tabBarItem key="tabBarItem" title="Settings" image="settingv_icon.png" id="ujR-Er-dnO" customClass="RAMAnimatedTabBarItem" customModule="MissingSkills" customModuleProvider="target">
                         <userDefinedRuntimeAttributes>
                             <userDefinedRuntimeAttribute type="color" keyPath="textColor">
                                 <color key="value" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -594,7 +613,7 @@ B. Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem
                         </connections>
                     </tabBarItem>
                 </viewController>
-                <customObject id="AZn-Fb-vkI" customClass="RAMBounceAnimation" customModule="MissingSkills" customModuleProvider="target"/>
+                <customObject id="AZn-Fb-vkI" customClass="RAMLeftRotationAnimation" customModule="MissingSkills" customModuleProvider="target"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="X1m-Ld-Ufs" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-566.25" y="885.21126760563379"/>
@@ -726,8 +745,7 @@ B. Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem
                                         <exclude reference="ucR-dl-AYx"/>
                                     </mask>
                                 </variation>
-                                <variation key="heightClass=regular-widthClass=compact" misplaced="YES">
-                                    <rect key="frame" x="72" y="263" width="456" height="24"/>
+                                <variation key="heightClass=regular-widthClass=compact">
                                     <mask key="constraints">
                                         <include reference="ucR-dl-AYx"/>
                                     </mask>
@@ -736,9 +754,6 @@ B. Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem
                             <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" animating="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="YaH-x1-2gZ">
                                 <rect key="frame" x="-10" y="-10" width="20" height="20"/>
                                 <color key="color" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                <variation key="heightClass=regular-widthClass=compact" misplaced="YES">
-                                    <rect key="frame" x="281.5" y="207" width="37" height="37"/>
-                                </variation>
                             </activityIndicatorView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Uw skills aan het vergelijken" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zVw-jH-zNL">
                                 <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
@@ -753,8 +768,7 @@ B. Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem
                                         <exclude reference="89p-dR-6Gc"/>
                                     </mask>
                                 </variation>
-                                <variation key="heightClass=regular-widthClass=compact" misplaced="YES">
-                                    <rect key="frame" x="44" y="154" width="512" height="21"/>
+                                <variation key="heightClass=regular-widthClass=compact">
                                     <mask key="constraints">
                                         <include reference="89p-dR-6Gc"/>
                                     </mask>
@@ -769,9 +783,6 @@ B. Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem
                                 <items>
                                     <navigationItem title="Uw vaardigheden" id="xPE-nE-6Pq"/>
                                 </items>
-                                <variation key="heightClass=regular-widthClass=compact" misplaced="YES">
-                                    <rect key="frame" x="0.0" y="20" width="600" height="44"/>
-                                </variation>
                                 <connections>
                                     <outlet property="delegate" destination="GNT-JZ-mhi" id="l04-GJ-BP9"/>
                                 </connections>
@@ -788,9 +799,6 @@ B. Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem
                                 </items>
                                 <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <color key="barTintColor" red="0.17254901959999999" green="0.42352941179999998" blue="0.75294117650000003" alpha="1" colorSpace="calibratedRGB"/>
-                                <variation key="heightClass=regular-widthClass=compact" misplaced="YES">
-                                    <rect key="frame" x="0.0" y="556" width="600" height="44"/>
-                                </variation>
                             </toolbar>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7hD-nQ-xXb">
                                 <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
@@ -806,8 +814,7 @@ B. Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem
                                         <exclude reference="GYM-Rm-OaP"/>
                                     </mask>
                                 </variation>
-                                <variation key="heightClass=regular-widthClass=compact" misplaced="YES">
-                                    <rect key="frame" x="16" y="91" width="568" height="99"/>
+                                <variation key="heightClass=regular-widthClass=compact">
                                     <mask key="constraints">
                                         <include reference="GYM-Rm-OaP"/>
                                     </mask>
@@ -857,9 +864,6 @@ B. Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem
                                         <inset key="separatorInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                     </tableViewCell>
                                 </prototypes>
-                                <variation key="heightClass=regular-widthClass=compact" misplaced="YES">
-                                    <rect key="frame" x="16" y="193" width="568" height="349"/>
-                                </variation>
                                 <connections>
                                     <outlet property="dataSource" destination="GNT-JZ-mhi" id="8RH-Ug-lb9"/>
                                     <outlet property="delegate" destination="GNT-JZ-mhi" id="gOF-vj-rsG"/>
@@ -991,15 +995,17 @@ B. Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem
     </scenes>
     <resources>
         <image name="Group 2.png" width="62" height="32"/>
+        <image name="choresv_icon.png" width="31" height="26"/>
+        <image name="coinv_icon.png" width="30" height="30"/>
         <image name="delete.png" width="16" height="16"/>
-        <image name="first" width="30" height="30"/>
         <image name="logo.png" width="497" height="83"/>
         <image name="menu" width="497" height="83"/>
-        <image name="second" width="30" height="30"/>
+        <image name="settingv_icon.png" width="28" height="26"/>
+        <image name="userv_icon.png" width="26" height="26"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="0Vm-lC-Suq"/>
+        <segue reference="Vwl-BE-6hk"/>
+        <segue reference="u7Y-xg-7CH"/>
         <segue reference="s7X-1p-DKq"/>
-        <segue reference="NUn-uT-5JC"/>
     </inferredMetricsTieBreakers>
 </document>

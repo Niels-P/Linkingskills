@@ -28,7 +28,6 @@ class RAMAnimatedTabBarItem: UITabBarItem {
     @IBInspectable var textColor: UIColor = UIColor.blackColor()
 
     func playAnimation(icon: UIImageView, textLabel: UILabel) {
-
         assert(animation != nil, "add animation in UITabBarItem")
         if animation != nil {
             animation.playAnimation(icon, textLabel: textLabel)
@@ -56,7 +55,10 @@ class RAMAnimatedTabBarController: UITabBarController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        tabBar.barTintColor = UIColor(red: 44.0/255.0, green: 108.0/255.0, blue: 192.0/255.0, alpha: 1.0)
+        tabBar.tintColor = UIColor.whiteColor()
+        
+        
         let containers = createViewContainers()
 
         createCustomIcons(containers)

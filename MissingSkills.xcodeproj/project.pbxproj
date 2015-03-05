@@ -42,6 +42,10 @@
 		2E426F071A8EA56E00A74684 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E426F061A8EA56E00A74684 /* DetailViewController.swift */; };
 		2E426F091A8EA59300A74684 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E426F081A8EA59300A74684 /* Colors.swift */; };
 		2E426F0B1A8EA70300A74684 /* CustomCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E426F0A1A8EA70300A74684 /* CustomCell.swift */; };
+		2E79BEAD1AA8BD8500416ABF /* userv_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 2E79BEA91AA8BD8500416ABF /* userv_icon.png */; };
+		2E79BEAF1AA8BD8500416ABF /* choresv_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 2E79BEAB1AA8BD8500416ABF /* choresv_icon.png */; };
+		2E79BEB31AA8C5BD00416ABF /* coinv_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 2E79BEB11AA8C5BD00416ABF /* coinv_icon.png */; };
+		2E79BEB41AA8C5BD00416ABF /* settingv_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 2E79BEB21AA8C5BD00416ABF /* settingv_icon.png */; };
 		2E8052EB1AA644B10034D787 /* jobsTable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E8052EA1AA644B10034D787 /* jobsTable.swift */; };
 		2E8052EF1AA64B090034D787 /* JobsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E8052EE1AA64B090034D787 /* JobsTableViewController.swift */; };
 		2E848A2C1AA756E90022DE65 /* colorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E848A2B1AA756E90022DE65 /* colorExtension.swift */; };
@@ -132,6 +136,10 @@
 		2E426F081A8EA59300A74684 /* Colors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
 		2E426F0A1A8EA70300A74684 /* CustomCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomCell.swift; sourceTree = "<group>"; };
 		2E5D65FF1AA5E6DC003673B1 /* MissingSkills.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = MissingSkills.entitlements; sourceTree = "<group>"; };
+		2E79BEA91AA8BD8500416ABF /* userv_icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = userv_icon.png; sourceTree = "<group>"; };
+		2E79BEAB1AA8BD8500416ABF /* choresv_icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = choresv_icon.png; sourceTree = "<group>"; };
+		2E79BEB11AA8C5BD00416ABF /* coinv_icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = coinv_icon.png; sourceTree = "<group>"; };
+		2E79BEB21AA8C5BD00416ABF /* settingv_icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = settingv_icon.png; sourceTree = "<group>"; };
 		2E8052EA1AA644B10034D787 /* jobsTable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = jobsTable.swift; sourceTree = "<group>"; };
 		2E8052EE1AA64B090034D787 /* JobsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JobsTableViewController.swift; sourceTree = "<group>"; };
 		2E848A2B1AA756E90022DE65 /* colorExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = colorExtension.swift; sourceTree = "<group>"; };
@@ -226,6 +234,10 @@
 		2E07FDB11A852B2E001E2135 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				2E79BEA91AA8BD8500416ABF /* userv_icon.png */,
+				2E79BEB11AA8C5BD00416ABF /* coinv_icon.png */,
+				2E79BEB21AA8C5BD00416ABF /* settingv_icon.png */,
+				2E79BEAB1AA8BD8500416ABF /* choresv_icon.png */,
 				2E848A301AA794000022DE65 /* delete.png */,
 				2E848A2E1AA793FC0022DE65 /* vink.png */,
 				2E9F93C11A8D64B90088DAF9 /* logo.png */,
@@ -496,13 +508,17 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2E79BEB31AA8C5BD00416ABF /* coinv_icon.png in Resources */,
 				2E07FDBB1A852B2E001E2135 /* Main.storyboard in Resources */,
 				2E9F93C21A8D64B90088DAF9 /* logo.png in Resources */,
 				2E07FDC01A852B2E001E2135 /* LaunchScreen.xib in Resources */,
 				2E848A311AA794000022DE65 /* delete.png in Resources */,
 				2E07FDBD1A852B2E001E2135 /* Images.xcassets in Resources */,
+				2E79BEAD1AA8BD8500416ABF /* userv_icon.png in Resources */,
 				2E9F93BD1A8D55B10088DAF9 /* pageT1.png in Resources */,
 				2E848A2F1AA793FC0022DE65 /* vink.png in Resources */,
+				2E79BEB41AA8C5BD00416ABF /* settingv_icon.png in Resources */,
+				2E79BEAF1AA8BD8500416ABF /* choresv_icon.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
