@@ -15,9 +15,7 @@ class ChoresController: UIViewController, UITableViewDataSource, UITableViewDele
 
     
     override func viewDidLoad() {
-        self.setKarweitjes()
         super.viewDidLoad()
-        
     }
     
     func positionForBar(bar: UIBarPositioning) -> UIBarPosition {
@@ -30,6 +28,7 @@ class ChoresController: UIViewController, UITableViewDataSource, UITableViewDele
         if(prefs.stringForKey("token") != nil || prefs.stringForKey("secret") != nil ) {
             println(prefs.stringForKey("token"))
             println(prefs.stringForKey("secret"))
+            self.arrayOfKarweitjes.removeAll()
             startController();
         } else {
             self.performSegueWithIdentifier("goto_login", sender: self)
@@ -40,40 +39,48 @@ class ChoresController: UIViewController, UITableViewDataSource, UITableViewDele
     }
     
     func startController() {
+        
         var prefs:NSUserDefaults = NSUserDefaults.standardUserDefaults()
-        prefs.setInteger(1, forKey: "ISLOGIN")
-        prefs.synchronize()
-        
-        
-        let oauthswift = OAuth1Swift(
-        consumerKey:    "77id0z47h7yy9p",
-        consumerSecret: "qBtL6w7JWTZyFRb7",
-        requestTokenUrl: "https://api.linkedin.com/uas/oauth/requestToken",
-        authorizeUrl:    "https://api.linkedin.com/uas/oauth/authenticate",
-        accessTokenUrl:  "https://api.linkedin.com/uas/oauth/accessToken"
-        )
-        
-        var parameters =  Dictionary<String, AnyObject>()
-        oauthswift.client.setUserDetails(prefs.stringForKey("token")!, secret: prefs.stringForKey("secret")!, parameters: parameters)
-        
-        oauthswift.client.get("https://api.linkedin.com/v1/people/~:(skills,first-name,last-name,picture-url)", parameters: parameters,
-        success: {
-            data, response in
-            println("PARAMETERS: \(parameters)");
-            let dataString = NSString(data: data, encoding: NSUTF8StringEncoding)
-            println(parameters);
-            println(dataString);
-        }, failure: {(error:NSError!) -> Void in
-            println(error)
-        })
+        var query = PFQuery(className:"users")
+        query.getObjectInBackgroundWithId(prefs.stringForKey("user")) {
+            (user: PFObject!, error: NSError!) -> Void in
+            if error != nil {
+                println(error)
+            } else {
+                var filterSkills = (user.valueForKey("missingSkills") as NSArray) as NSMutableArray
+                self.choresSelector(filterSkills);
+                self.performSegueWithIdentifier("getSkills", sender: self)
+            }
+        }
     }
     
-    func setKarweitjes() {
-        var karweitje1 = Karweitjes(name: "SEO Teksten schrijven", description: "Test 123Test\n1234");
-        var karweitje2 = Karweitjes(name: "SEO Teksten", description: "Lorem Ipsum Test\n1234");
-        arrayOfKarweitjes.append(karweitje1);
-        arrayOfKarweitjes.append(karweitje2);
-        println(arrayOfKarweitjes.count);
+    func choresSelector(filterSkills : NSArray) {
+        var query = PFQuery(className:"chores")
+        query.findObjectsInBackgroundWithBlock {
+            (objects: [AnyObject]!, error: NSError!) -> Void in
+            if error == nil {
+                if let objects = objects as? [PFObject] {
+                    for object in objects {
+                        if(object.valueForKey("userid") == nil) {
+                            var arraySkills = (object.valueForKey("skills") as NSArray) as NSMutableArray
+                            for skills in filterSkills {
+                                if(arraySkills.containsObject(skills)) {
+                                    var name = object.valueForKey("name") as String
+                                    var descrip = object.valueForKey("descr") as String
+                                    var karweitje = Karweitjes(name: name, description: descrip);
+                                    self.arrayOfKarweitjes.append(karweitje);
+                                    self.myTableView.reloadData();
+                                }
+                            }
+                        }
+                    }
+                } else {
+                    println("Nope");
+                }
+            } else {
+                println("Error: \(error) \(error.userInfo!)")
+            }
+        }
     }
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {

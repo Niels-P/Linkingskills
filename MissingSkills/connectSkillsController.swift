@@ -141,6 +141,19 @@ class connectSkillsController: UIViewController, NSXMLParserDelegate, UITableVie
              * Er zijn skills gevonden, dan willen we die weergeven, TOCH?!
             */
             
+            var prefs:NSUserDefaults = NSUserDefaults.standardUserDefaults()
+            var query = PFQuery(className:"users")
+            println(prefs.stringForKey("user"))
+            query.getObjectInBackgroundWithId(prefs.stringForKey("user")) {
+                (user: PFObject!, error: NSError!) -> Void in
+                if error != nil {
+                    println(error)
+                } else {
+                    user["missingSkills"] = self.notItems
+                    user.saveInBackground()
+                }
+            }
+            
             self.view.backgroundColor = UIColor(red: 255.0/255.0, green: 255.0/255.0, blue: 255.0/255.0, alpha: 1.0)
             
             textExplain.hidden = false;
