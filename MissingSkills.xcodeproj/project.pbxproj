@@ -45,6 +45,8 @@
 		2E8052EB1AA644B10034D787 /* jobsTable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E8052EA1AA644B10034D787 /* jobsTable.swift */; };
 		2E8052EF1AA64B090034D787 /* JobsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E8052EE1AA64B090034D787 /* JobsTableViewController.swift */; };
 		2E848A2C1AA756E90022DE65 /* colorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E848A2B1AA756E90022DE65 /* colorExtension.swift */; };
+		2E848A2F1AA793FC0022DE65 /* vink.png in Resources */ = {isa = PBXBuildFile; fileRef = 2E848A2E1AA793FC0022DE65 /* vink.png */; };
+		2E848A311AA794000022DE65 /* delete.png in Resources */ = {isa = PBXBuildFile; fileRef = 2E848A301AA794000022DE65 /* delete.png */; };
 		2E8840E71AA4B19B00C1E362 /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E8840E61AA4B19B00C1E362 /* SWRevealViewController.m */; };
 		2E9252A81A8E46D800B5AC55 /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E9252A71A8E46D800B5AC55 /* WebViewController.swift */; };
 		2E9F93B51A8D47830088DAF9 /* LoginController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E9F93B41A8D47830088DAF9 /* LoginController.swift */; };
@@ -133,6 +135,8 @@
 		2E8052EA1AA644B10034D787 /* jobsTable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = jobsTable.swift; sourceTree = "<group>"; };
 		2E8052EE1AA64B090034D787 /* JobsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JobsTableViewController.swift; sourceTree = "<group>"; };
 		2E848A2B1AA756E90022DE65 /* colorExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = colorExtension.swift; sourceTree = "<group>"; };
+		2E848A2E1AA793FC0022DE65 /* vink.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = vink.png; sourceTree = "<group>"; };
+		2E848A301AA794000022DE65 /* delete.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = delete.png; sourceTree = "<group>"; };
 		2E8840E51AA4B19B00C1E362 /* SWRevealViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SWRevealViewController.h; sourceTree = "<group>"; };
 		2E8840E61AA4B19B00C1E362 /* SWRevealViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWRevealViewController.m; sourceTree = "<group>"; };
 		2E9252A71A8E46D800B5AC55 /* WebViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebViewController.swift; sourceTree = "<group>"; };
@@ -222,6 +226,8 @@
 		2E07FDB11A852B2E001E2135 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				2E848A301AA794000022DE65 /* delete.png */,
+				2E848A2E1AA793FC0022DE65 /* vink.png */,
 				2E9F93C11A8D64B90088DAF9 /* logo.png */,
 				2E9F93BC1A8D55B10088DAF9 /* pageT1.png */,
 				2E07FDB21A852B2E001E2135 /* Info.plist */,
@@ -493,8 +499,10 @@
 				2E07FDBB1A852B2E001E2135 /* Main.storyboard in Resources */,
 				2E9F93C21A8D64B90088DAF9 /* logo.png in Resources */,
 				2E07FDC01A852B2E001E2135 /* LaunchScreen.xib in Resources */,
+				2E848A311AA794000022DE65 /* delete.png in Resources */,
 				2E07FDBD1A852B2E001E2135 /* Images.xcassets in Resources */,
 				2E9F93BD1A8D55B10088DAF9 /* pageT1.png in Resources */,
+				2E848A2F1AA793FC0022DE65 /* vink.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

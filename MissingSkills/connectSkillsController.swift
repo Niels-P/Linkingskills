@@ -9,16 +9,70 @@
 import UIKit
 import OAuthSwift
 
-class connectSkillsController: UIViewController, NSXMLParserDelegate {
+class connectSkillsController: UIViewController, NSXMLParserDelegate, UITableViewDataSource, UITableViewDelegate {
     
     @IBOutlet weak var activitiy: UIActivityIndicatorView!
     @IBOutlet weak var toplabel: UILabel!
     @IBOutlet weak var bottomlabel: UILabel!
     @IBOutlet weak var navigation: UINavigationBar!
+    @IBOutlet weak var textExplain: UILabel!
+    @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var bottomBar: UIToolbar!
+    
+    var items: [String] = []
+    var notItems: [String] = []
+
+    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return self.items.count;
+    }
+    
+    @IBAction func go(sender: AnyObject) {
+        tableView.hidden = true;
+        navigation.hidden = true;
+        textExplain.hidden = true;
+        bottomBar.hidden = true;
+        
+        self.view.backgroundColor = UIColor(red: 44.0/255.0, green: 108.0/255.0, blue: 192.0/255.0, alpha: 1.0)
+        toplabel.text = "Klusjes aan het verzamelen";
+        bottomlabel.hidden = false;
+        toplabel.hidden = false;
+        activitiy.hidden = false;
+        
+        var timer = NSTimer.scheduledTimerWithTimeInterval(2, target: self, selector: Selector("someSelector"), userInfo: nil, repeats: false)
+    }
+    
+    func someSelector() {
+        self.performSegueWithIdentifier("goChores", sender: self)
+    }
+    
+    
+    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+        var cell:UITableViewCell = self.tableView.dequeueReusableCellWithIdentifier("Cell") as UITableViewCell
+        println(items);
+        var textual = self.items[indexPath.row];
+        cell.textLabel?.font = UIFont(name: "Helvetica Neue", size: 14)
+        cell.textLabel?.text = self.items[indexPath.row]
+        if(textual[textual.startIndex] == "1") {
+            cell.textLabel?.text = textual.stringByReplacingOccurrencesOfString("1", withString: "", options: NSStringCompareOptions.LiteralSearch, range: nil)
+            cell.imageView?.image = UIImage(named: "vink.png");
+        } else {
+            cell.imageView?.image = UIImage(named: "delete.png");
+        }
+        return cell
+    }
+    
+    
     
     override func viewDidLoad() {
-        self.view.backgroundColor = UIColor(red: 44.0/255.0, green: 108.0/255.0, blue: 192.0/255.0, alpha: 1.0)
+        textExplain.hidden = true;
+        tableView.hidden = true;
+        bottomBar.hidden = true;
         navigation.hidden = true
+
+        
+        self.view.backgroundColor = UIColor(red: 44.0/255.0, green: 108.0/255.0, blue: 192.0/255.0, alpha: 1.0)
+        self.tableView.registerClass(UITableViewCell.self, forCellReuseIdentifier: "Cell")
+        self.tableView.separatorColor = UIColor.whiteColor()
         getJobId()
         super.viewDidLoad()
     }
@@ -67,24 +121,33 @@ class connectSkillsController: UIViewController, NSXMLParserDelegate {
     }
     
     func compareSkills(jobSkills: NSMutableArray, mySkills: NSArray) {
-        for(var i = 0; i < mySkills.count; i++) {
-            if(jobSkills.containsObject(mySkills[i])) {
-                println("Gevonden skill \(mySkills[i])");
-                jobSkills.removeObject(mySkills[i]);
+        for(var i = 0; i < jobSkills.count; i++) {
+            if(mySkills.containsObject(jobSkills[i])) {
+                println("Gevonden skill \(jobSkills[i])");
+                items.append("1\(jobSkills[i])");
+                
+            } else {
+                items.append("\(jobSkills[i])");
+                notItems.append("\(jobSkills[i])");
             }
         }
-        
+        self.tableView.reloadData()
         shareResults(jobSkills)
     }
     
     func shareResults(skillsLeft: NSMutableArray) {
-        if(skillsLeft.count > 0) {
+        if(notItems.count > 0) {
             /*
              * Er zijn skills gevonden, dan willen we die weergeven, TOCH?!
             */
             
             self.view.backgroundColor = UIColor(red: 255.0/255.0, green: 255.0/255.0, blue: 255.0/255.0, alpha: 1.0)
+            
+            textExplain.hidden = false;
             navigation.hidden = false
+            tableView.hidden = false;
+            bottomBar.hidden = false;
+            
 
         } else {
             /*
@@ -105,6 +168,7 @@ class connectSkillsController: UIViewController, NSXMLParserDelegate {
         }
     }
     
+    
 
     
     func positionForBar(bar: UIBarPositioning) -> UIBarPosition {
@@ -115,6 +179,8 @@ class connectSkillsController: UIViewController, NSXMLParserDelegate {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    
+    
     
     
 }

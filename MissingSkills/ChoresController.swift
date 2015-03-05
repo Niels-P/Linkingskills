@@ -25,8 +25,6 @@ class ChoresController: UIViewController, UITableViewDataSource, UITableViewDele
     }
     
     override func viewDidAppear(animated: Bool) {
-        self.performSegueWithIdentifier("goto_login", sender: self)
-
         var prefs:NSUserDefaults = NSUserDefaults.standardUserDefaults()
 
         if(prefs.stringForKey("token") != nil || prefs.stringForKey("secret") != nil ) {

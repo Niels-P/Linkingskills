@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6724" systemVersion="14B25" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="49e-Tb-3d3">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6711"/>
+        <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
@@ -98,6 +99,9 @@
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
+                                <variation key="heightClass=regular-widthClass=compact" misplaced="YES">
+                                    <rect key="frame" x="-2" y="56" width="602" height="651"/>
+                                </variation>
                                 <connections>
                                     <outlet property="dataSource" destination="9pv-A4-QxB" id="pB1-nD-veO"/>
                                     <outlet property="delegate" destination="9pv-A4-QxB" id="qOc-bV-i2J"/>
@@ -322,7 +326,8 @@ With skillcoins you can buy discount for study’s or complete courses that can 
                                         <exclude reference="qY2-vq-ddA"/>
                                     </mask>
                                 </variation>
-                                <variation key="heightClass=regular-widthClass=compact">
+                                <variation key="heightClass=regular-widthClass=compact" misplaced="YES">
+                                    <rect key="frame" x="237" y="293" width="126" height="30"/>
                                     <mask key="constraints">
                                         <include reference="qY2-vq-ddA"/>
                                     </mask>
@@ -642,10 +647,10 @@ B. Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <color key="tintColor" red="0.15686274510000001" green="0.41176470590000003" blue="0.76862745099999996" alpha="1" colorSpace="calibratedRGB"/>
-                        <searchBar key="tableHeaderView" contentMode="redraw" placeholder="Zoek uw toekomstige baan" showsScopeBar="YES" id="yN0-7q-H65">
+                        <searchBar key="tableHeaderView" contentMode="redraw" placeholder="Zoek uw toekomstige baan" translucent="NO" showsScopeBar="YES" id="yN0-7q-H65">
                             <rect key="frame" x="0.0" y="64" width="600" height="88"/>
                             <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
-                            <color key="tintColor" red="0.15686274510000001" green="0.41176470590000003" blue="0.76862745099999996" alpha="1" colorSpace="calibratedRGB"/>
+                            <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                             <color key="barTintColor" red="0.15686274510000001" green="0.41176470590000003" blue="0.76862745099999996" alpha="1" colorSpace="calibratedRGB"/>
                             <textInputTraits key="textInputTraits"/>
                             <scopeButtonTitles>
@@ -721,7 +726,8 @@ B. Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem
                                         <exclude reference="ucR-dl-AYx"/>
                                     </mask>
                                 </variation>
-                                <variation key="heightClass=regular-widthClass=compact">
+                                <variation key="heightClass=regular-widthClass=compact" misplaced="YES">
+                                    <rect key="frame" x="72" y="263" width="456" height="24"/>
                                     <mask key="constraints">
                                         <include reference="ucR-dl-AYx"/>
                                     </mask>
@@ -730,6 +736,9 @@ B. Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem
                             <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" animating="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="YaH-x1-2gZ">
                                 <rect key="frame" x="-10" y="-10" width="20" height="20"/>
                                 <color key="color" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <variation key="heightClass=regular-widthClass=compact" misplaced="YES">
+                                    <rect key="frame" x="281.5" y="207" width="37" height="37"/>
+                                </variation>
                             </activityIndicatorView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Uw skills aan het vergelijken" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zVw-jH-zNL">
                                 <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
@@ -744,7 +753,8 @@ B. Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem
                                         <exclude reference="89p-dR-6Gc"/>
                                     </mask>
                                 </variation>
-                                <variation key="heightClass=regular-widthClass=compact">
+                                <variation key="heightClass=regular-widthClass=compact" misplaced="YES">
+                                    <rect key="frame" x="44" y="154" width="512" height="21"/>
                                     <mask key="constraints">
                                         <include reference="89p-dR-6Gc"/>
                                     </mask>
@@ -759,6 +769,9 @@ B. Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem
                                 <items>
                                     <navigationItem title="Uw vaardigheden" id="xPE-nE-6Pq"/>
                                 </items>
+                                <variation key="heightClass=regular-widthClass=compact" misplaced="YES">
+                                    <rect key="frame" x="0.0" y="20" width="600" height="44"/>
+                                </variation>
                                 <connections>
                                     <outlet property="delegate" destination="GNT-JZ-mhi" id="l04-GJ-BP9"/>
                                 </connections>
@@ -767,14 +780,95 @@ B. Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                                 <items>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="fDL-l9-CKH"/>
-                                    <barButtonItem title="Doorgaan" id="5J1-Lv-1li"/>
+                                    <barButtonItem title="Doorgaan" id="5J1-Lv-1li">
+                                        <connections>
+                                            <action selector="go:" destination="GNT-JZ-mhi" id="cxe-3E-rkc"/>
+                                        </connections>
+                                    </barButtonItem>
                                 </items>
                                 <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <color key="barTintColor" red="0.17254901959999999" green="0.42352941179999998" blue="0.75294117650000003" alpha="1" colorSpace="calibratedRGB"/>
+                                <variation key="heightClass=regular-widthClass=compact" misplaced="YES">
+                                    <rect key="frame" x="0.0" y="556" width="600" height="44"/>
+                                </variation>
                             </toolbar>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7hD-nQ-xXb">
+                                <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="99" id="GYM-Rm-OaP"/>
+                                </constraints>
+                                <string key="text">Hieronder ziet u de meest gevraagde vaardigheden voor het beroep. Als er een vinkje voor de vaardigheid staat dan betekent dat u volgens uw Linkedin profiel deze al beheert. Als er een kruisje voorstaat dan betekent dat u deze nog niet beheerst, en zullen wij karwijtjes voor u klaarzetten.</string>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="14"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="GYM-Rm-OaP"/>
+                                    </mask>
+                                </variation>
+                                <variation key="heightClass=regular-widthClass=compact" misplaced="YES">
+                                    <rect key="frame" x="16" y="91" width="568" height="99"/>
+                                    <mask key="constraints">
+                                        <include reference="GYM-Rm-OaP"/>
+                                    </mask>
+                                </variation>
+                            </label>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="GcO-gX-nTj">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="Cell" rowHeight="35" id="B49-KH-KSC">
+                                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="B49-KH-KSC" id="CJw-k0-yEh">
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="delete.png" translatesAutoresizingMaskIntoConstraints="NO" id="sBF-e3-tEE">
+                                                    <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                                </imageView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="sBF-e3-tEE" firstAttribute="top" secondItem="CJw-k0-yEh" secondAttribute="topMargin" constant="6" id="JOn-1a-VS0"/>
+                                                <constraint firstItem="sBF-e3-tEE" firstAttribute="leading" secondItem="CJw-k0-yEh" secondAttribute="leadingMargin" id="LzR-Yy-QV6"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="sBF-e3-tEE" secondAttribute="bottom" constant="4.5" id="Wu2-23-XQ5"/>
+                                            </constraints>
+                                            <variation key="default">
+                                                <mask key="subviews">
+                                                    <exclude reference="sBF-e3-tEE"/>
+                                                </mask>
+                                                <mask key="constraints">
+                                                    <exclude reference="JOn-1a-VS0"/>
+                                                    <exclude reference="LzR-Yy-QV6"/>
+                                                    <exclude reference="Wu2-23-XQ5"/>
+                                                </mask>
+                                            </variation>
+                                            <variation key="heightClass=regular-widthClass=compact">
+                                                <mask key="subviews">
+                                                    <include reference="sBF-e3-tEE"/>
+                                                </mask>
+                                                <mask key="constraints">
+                                                    <include reference="JOn-1a-VS0"/>
+                                                    <include reference="LzR-Yy-QV6"/>
+                                                    <include reference="Wu2-23-XQ5"/>
+                                                </mask>
+                                            </variation>
+                                        </tableViewCellContentView>
+                                        <color key="backgroundColor" red="0.96302496693121697" green="0.96302496693121697" blue="0.96302496693121697" alpha="0.59999999999999998" colorSpace="calibratedRGB"/>
+                                        <inset key="separatorInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                    </tableViewCell>
+                                </prototypes>
+                                <variation key="heightClass=regular-widthClass=compact" misplaced="YES">
+                                    <rect key="frame" x="16" y="193" width="568" height="349"/>
+                                </variation>
+                                <connections>
+                                    <outlet property="dataSource" destination="GNT-JZ-mhi" id="8RH-Ug-lb9"/>
+                                    <outlet property="delegate" destination="GNT-JZ-mhi" id="gOF-vj-rsG"/>
+                                </connections>
+                            </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="Hk9-fU-eaJ" firstAttribute="top" secondItem="GcO-gX-nTj" secondAttribute="bottom" constant="14" id="0Ma-EC-6Ws"/>
                             <constraint firstItem="Tax-Od-IK6" firstAttribute="leading" secondItem="mN4-PU-AEn" secondAttribute="leadingMargin" constant="97" id="30c-Wu-LCr">
                                 <variation key="heightClass=regular-widthClass=compact" constant="56"/>
                             </constraint>
@@ -782,25 +876,31 @@ B. Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem
                             <constraint firstItem="mgN-bm-zc6" firstAttribute="top" secondItem="Tax-Od-IK6" secondAttribute="bottom" constant="329" id="7XG-2k-tbD">
                                 <variation key="heightClass=regular-widthClass=compact" constant="313"/>
                             </constraint>
+                            <constraint firstItem="GcO-gX-nTj" firstAttribute="top" secondItem="7hD-nQ-xXb" secondAttribute="bottom" constant="3" id="C3w-jF-Qoo"/>
                             <constraint firstItem="zVw-jH-zNL" firstAttribute="leading" secondItem="mN4-PU-AEn" secondAttribute="leadingMargin" constant="86" id="Dg4-2b-JrY">
                                 <variation key="heightClass=regular-widthClass=compact" constant="28"/>
                             </constraint>
                             <constraint firstItem="9Ft-Ua-BHk" firstAttribute="centerX" secondItem="zVw-jH-zNL" secondAttribute="centerX" id="J7A-Cn-cBo"/>
+                            <constraint firstItem="7hD-nQ-xXb" firstAttribute="centerX" secondItem="9Ft-Ua-BHk" secondAttribute="centerX" id="Kzz-aD-1xd"/>
                             <constraint firstItem="9Ft-Ua-BHk" firstAttribute="leading" secondItem="mN4-PU-AEn" secondAttribute="leading" id="L0g-pB-vVW"/>
                             <constraint firstItem="zVw-jH-zNL" firstAttribute="centerX" secondItem="YaH-x1-2gZ" secondAttribute="centerX" id="LM2-Ym-SPZ"/>
                             <constraint firstItem="YaH-x1-2gZ" firstAttribute="centerX" secondItem="Tax-Od-IK6" secondAttribute="centerX" id="UbM-jO-W0s">
                                 <variation key="heightClass=regular-widthClass=compact" constant="0.0"/>
                             </constraint>
                             <constraint firstItem="Hk9-fU-eaJ" firstAttribute="leading" secondItem="9Ft-Ua-BHk" secondAttribute="leading" id="Xiy-gr-4N5"/>
+                            <constraint firstItem="7hD-nQ-xXb" firstAttribute="leading" secondItem="mN4-PU-AEn" secondAttribute="leadingMargin" id="cXe-vr-vY1"/>
                             <constraint firstItem="Tax-Od-IK6" firstAttribute="top" secondItem="YaH-x1-2gZ" secondAttribute="bottom" constant="17" id="dAD-qN-W6B">
                                 <variation key="heightClass=regular-widthClass=compact" constant="19"/>
                             </constraint>
+                            <constraint firstItem="GcO-gX-nTj" firstAttribute="trailing" secondItem="7hD-nQ-xXb" secondAttribute="trailing" id="htf-fF-9Vh"/>
                             <constraint firstItem="Hk9-fU-eaJ" firstAttribute="trailing" secondItem="9Ft-Ua-BHk" secondAttribute="trailing" id="jBR-zM-buu"/>
                             <constraint firstItem="zVw-jH-zNL" firstAttribute="centerX" secondItem="mN4-PU-AEn" secondAttribute="centerX" id="kko-n8-bBn"/>
                             <constraint firstItem="9Ft-Ua-BHk" firstAttribute="top" secondItem="vKU-Sh-vqJ" secondAttribute="bottom" id="ncF-S2-24R"/>
+                            <constraint firstItem="GcO-gX-nTj" firstAttribute="leading" secondItem="7hD-nQ-xXb" secondAttribute="leading" id="oD4-kk-x6q"/>
                             <constraint firstItem="YaH-x1-2gZ" firstAttribute="top" secondItem="zVw-jH-zNL" secondAttribute="bottom" constant="19" id="qp3-DN-uI7">
                                 <variation key="heightClass=regular-widthClass=compact" constant="32"/>
                             </constraint>
+                            <constraint firstItem="7hD-nQ-xXb" firstAttribute="top" secondItem="9Ft-Ua-BHk" secondAttribute="bottom" constant="27" id="uLj-78-Oq8"/>
                         </constraints>
                         <variation key="default">
                             <mask key="subviews">
@@ -809,22 +909,31 @@ B. Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem
                                 <exclude reference="zVw-jH-zNL"/>
                                 <exclude reference="9Ft-Ua-BHk"/>
                                 <exclude reference="Hk9-fU-eaJ"/>
+                                <exclude reference="7hD-nQ-xXb"/>
+                                <exclude reference="GcO-gX-nTj"/>
                             </mask>
                             <mask key="constraints">
-                                <exclude reference="J7A-Cn-cBo"/>
-                                <exclude reference="L0g-pB-vVW"/>
-                                <exclude reference="ncF-S2-24R"/>
+                                <exclude reference="Kzz-aD-1xd"/>
+                                <exclude reference="cXe-vr-vY1"/>
+                                <exclude reference="uLj-78-Oq8"/>
+                                <exclude reference="30c-Wu-LCr"/>
+                                <exclude reference="dAD-qN-W6B"/>
+                                <exclude reference="7XG-2k-tbD"/>
                                 <exclude reference="Dg4-2b-JrY"/>
                                 <exclude reference="LM2-Ym-SPZ"/>
                                 <exclude reference="kko-n8-bBn"/>
                                 <exclude reference="UbM-jO-W0s"/>
                                 <exclude reference="qp3-DN-uI7"/>
-                                <exclude reference="30c-Wu-LCr"/>
-                                <exclude reference="dAD-qN-W6B"/>
+                                <exclude reference="J7A-Cn-cBo"/>
+                                <exclude reference="L0g-pB-vVW"/>
+                                <exclude reference="ncF-S2-24R"/>
+                                <exclude reference="0Ma-EC-6Ws"/>
                                 <exclude reference="3NC-MS-gdm"/>
                                 <exclude reference="Xiy-gr-4N5"/>
                                 <exclude reference="jBR-zM-buu"/>
-                                <exclude reference="7XG-2k-tbD"/>
+                                <exclude reference="C3w-jF-Qoo"/>
+                                <exclude reference="htf-fF-9Vh"/>
+                                <exclude reference="oD4-kk-x6q"/>
                             </mask>
                         </variation>
                         <variation key="heightClass=regular-widthClass=compact">
@@ -834,32 +943,45 @@ B. Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem
                                 <include reference="zVw-jH-zNL"/>
                                 <include reference="9Ft-Ua-BHk"/>
                                 <include reference="Hk9-fU-eaJ"/>
+                                <include reference="7hD-nQ-xXb"/>
+                                <include reference="GcO-gX-nTj"/>
                             </mask>
                             <mask key="constraints">
-                                <include reference="J7A-Cn-cBo"/>
-                                <include reference="L0g-pB-vVW"/>
-                                <include reference="ncF-S2-24R"/>
+                                <include reference="Kzz-aD-1xd"/>
+                                <include reference="cXe-vr-vY1"/>
+                                <include reference="uLj-78-Oq8"/>
+                                <include reference="30c-Wu-LCr"/>
+                                <include reference="dAD-qN-W6B"/>
+                                <include reference="7XG-2k-tbD"/>
                                 <include reference="Dg4-2b-JrY"/>
                                 <include reference="LM2-Ym-SPZ"/>
                                 <include reference="kko-n8-bBn"/>
                                 <include reference="UbM-jO-W0s"/>
                                 <include reference="qp3-DN-uI7"/>
-                                <include reference="30c-Wu-LCr"/>
-                                <include reference="dAD-qN-W6B"/>
+                                <include reference="J7A-Cn-cBo"/>
+                                <include reference="L0g-pB-vVW"/>
+                                <include reference="ncF-S2-24R"/>
+                                <include reference="0Ma-EC-6Ws"/>
                                 <include reference="3NC-MS-gdm"/>
                                 <include reference="Xiy-gr-4N5"/>
                                 <include reference="jBR-zM-buu"/>
-                                <include reference="7XG-2k-tbD"/>
+                                <include reference="C3w-jF-Qoo"/>
+                                <include reference="htf-fF-9Vh"/>
+                                <include reference="oD4-kk-x6q"/>
                             </mask>
                         </variation>
                     </view>
                     <connections>
                         <outlet property="activitiy" destination="YaH-x1-2gZ" id="7be-Pk-sD9"/>
+                        <outlet property="bottomBar" destination="Hk9-fU-eaJ" id="vML-KG-kv1"/>
                         <outlet property="bottomlabel" destination="Tax-Od-IK6" id="eSj-R6-jIc"/>
                         <outlet property="navigation" destination="9Ft-Ua-BHk" id="soE-6f-KQg"/>
+                        <outlet property="tableView" destination="GcO-gX-nTj" id="xPY-uu-yxK"/>
+                        <outlet property="textExplain" destination="7hD-nQ-xXb" id="hue-a0-mW1"/>
                         <outlet property="toplabel" destination="zVw-jH-zNL" id="n3L-VP-rqU"/>
                         <segue destination="4nb-bU-jdP" kind="show" identifier="goBack" id="0Vm-lC-Suq"/>
                         <segue destination="HGV-nL-t2G" kind="show" identifier="chooseOther" id="s7X-1p-DKq"/>
+                        <segue destination="9pv-A4-QxB" kind="show" identifier="goChores" id="NUn-uT-5JC"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uNm-0X-9Up" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -869,6 +991,7 @@ B. Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem
     </scenes>
     <resources>
         <image name="Group 2.png" width="62" height="32"/>
+        <image name="delete.png" width="16" height="16"/>
         <image name="first" width="30" height="30"/>
         <image name="logo.png" width="497" height="83"/>
         <image name="menu" width="497" height="83"/>
@@ -877,5 +1000,6 @@ B. Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem
     <inferredMetricsTieBreakers>
         <segue reference="0Vm-lC-Suq"/>
         <segue reference="s7X-1p-DKq"/>
+        <segue reference="NUn-uT-5JC"/>
     </inferredMetricsTieBreakers>
 </document>

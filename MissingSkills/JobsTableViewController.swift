@@ -38,7 +38,6 @@ class JobsTableViewController: UITableViewController {
         // Reload the table
         self.tableView.contentInset = UIEdgeInsetsMake(10,0,0,0);
         searchbar.translucent = false;
-        searchbar.backgroundColor = UIColor(red: 0, green: 0, blue: 0, alpha: 1.0);
 
     }
     
