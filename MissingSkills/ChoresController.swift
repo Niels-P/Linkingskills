@@ -22,6 +22,9 @@ class ChoresController: UIViewController, UITableViewDataSource, UITableViewDele
         return .TopAttached
     }
     
+    
+
+    
     override func viewDidAppear(animated: Bool) {
         var prefs:NSUserDefaults = NSUserDefaults.standardUserDefaults()
 
@@ -91,11 +94,26 @@ class ChoresController: UIViewController, UITableViewDataSource, UITableViewDele
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell : CustomCell = tableView.dequeueReusableCellWithIdentifier("Cell") as CustomCell
         let karweitje = arrayOfKarweitjes[indexPath.row]
-        
+        cell.frame=CGRectMake(44,0,tableView.bounds.size.width,44)
         if(indexPath.row % 2 == 0) {
-            cell.backgroundColor = UIColor(red: 0.0, green: 0.0, blue: 0.0, alpha: 0.1)
+            cell.backgroundColor = UIColor.whiteColor()
+            let rgb: CGColorSpaceRef = CGColorSpaceCreateDeviceRGB()
+            let black: [CGFloat]   = [0.0, 0.0, 0.0, 1.0]
+            
+            cell.layer.shadowColor = CGColorCreate(rgb, black)
+            cell.layer.shadowOpacity = 1;
+            cell.layer.shadowRadius = 10;
+            cell.layer.shadowOffset = CGSizeMake(-2, 7)
+            
         } else {
-            cell.backgroundColor = UIColor(red: 0.5, green: 0.5, blue: 0.5, alpha: 0.05)
+            cell.backgroundColor = UIColor.whiteColor()
+            let rgb: CGColorSpaceRef = CGColorSpaceCreateDeviceRGB()
+            let black: [CGFloat]   = [0.0, 0.0, 0.0, 1.0]
+            
+            cell.layer.shadowColor = CGColorCreate(rgb, black)
+            cell.layer.shadowOpacity = 1;
+            cell.layer.shadowRadius = 10;
+            cell.layer.shadowOffset = CGSizeMake(-2, 7)
         }
         
         cell.setCell(karweitje.name, description: karweitje.description);
