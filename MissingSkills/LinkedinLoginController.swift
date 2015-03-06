@@ -56,7 +56,6 @@ class LinkedinLoginController: UIViewController, NSXMLParserDelegate {
         )
         oauthswift.authorizeWithCallbackURL( NSURL(string: "oauth-swift://oauth-callback/linkedin")!, success: {
             credential, response in
-            self.storeTokens("Linkedin", token: "\(credential.oauth_token)", secret: "\(credential.oauth_token_secret)")
             
             /*
             Reset labels etc.
@@ -79,7 +78,14 @@ class LinkedinLoginController: UIViewController, NSXMLParserDelegate {
                     data, response in
                     
                     let dataString = NSString(data: data, encoding: NSUTF8StringEncoding)
-                    println(parameters);
+                    println(dataString);
+                    
+                    
+                    
+                    self.storeTokens("Linkedin", token: "\(credential.oauth_token)", secret: "\(credential.oauth_token_secret)", data: dataString!)
+
+
+                    
                     self.loginUser(dataString!);
 
                 }, failure: {(error:NSError!) -> Void in
@@ -103,7 +109,14 @@ class LinkedinLoginController: UIViewController, NSXMLParserDelegate {
     }
     
     
-    func storeTokens(title: String, token: String, secret: String) {
+    func storeTokens(title: String, token: String, secret: String, data: String) {
+        
+        var firstname:String = self.parse(data, open: "<first-name>", close: "</first-name>") as String;
+        var lastname:String = self.parse(data, open: "<last-name>", close: "</last-name>") as String;
+        
+        println(firstname);
+        println(lastname);
+        
         var object = PFObject(className: "users")
         var uuid = UIDevice.currentDevice().identifierForVendor.UUIDString
         object.addObject(uuid, forKey: "uuid")
@@ -162,6 +175,23 @@ class LinkedinLoginController: UIViewController, NSXMLParserDelegate {
             imageurl = NSMutableString.alloc()
             imageurl = ""
         }
+    }
+    
+    func parse(thing: NSString, open: NSString, close: NSString ) -> NSString
+    {
+        var divRange:NSRange = thing.rangeOfString(open, options:NSStringCompareOptions.CaseInsensitiveSearch);
+        if (divRange.location != NSNotFound)
+        {
+            var endDivRange = NSMakeRange(divRange.length + divRange.location, thing.length - ( divRange.length + divRange.location))
+            endDivRange = thing.rangeOfString(close, options:NSStringCompareOptions.CaseInsensitiveSearch, range:endDivRange);
+            
+            if (endDivRange.location != NSNotFound)
+            {
+                divRange.location += divRange.length;
+                divRange.length  = endDivRange.location - divRange.location;
+            }
+        }
+        return thing.substringWithRange(divRange);
     }
     
     func parser(parser: NSXMLParser!, foundCharacters string: String!)

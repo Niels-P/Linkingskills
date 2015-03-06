@@ -46,7 +46,6 @@ class ChoresController: UIViewController, UITableViewDataSource, UITableViewDele
     }
     
     func startController() {
-        
         var prefs:NSUserDefaults = NSUserDefaults.standardUserDefaults()
         var query = PFQuery(className:"users")
         query.getObjectInBackgroundWithId(prefs.stringForKey("user")) {

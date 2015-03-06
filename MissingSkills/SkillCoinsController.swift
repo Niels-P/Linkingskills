@@ -9,9 +9,16 @@
 import UIKit
 import OAuthSwift
 
-class SkillCoinsController: UIViewController {
+class SkillCoinsController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
     @IBOutlet weak var imageAvatar: UIImageView!
+    @IBOutlet weak var fullName: UILabel!
+    @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var skillCAmount: UILabel!
+    
+    var apps: [String] = []
+    var total:Int = 0;
+    var createdAts: [String] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -33,11 +40,33 @@ class SkillCoinsController: UIViewController {
         var parameters =  Dictionary<String, AnyObject>()
         oauthswift.client.setUserDetails(prefs.stringForKey("token")!, secret: prefs.stringForKey("secret")!, parameters: parameters)
         
-        oauthswift.client.get("https://api.linkedin.com/v1/people/~:(picture-url)", parameters: parameters,
+        oauthswift.client.get("https://api.linkedin.com/v1/people/~:(picture-url,first-name,last-name)", parameters: parameters,
             success: {
                 data, response in
                 let dataString = NSString(data: data, encoding: NSUTF8StringEncoding)
-                var imageURL = self.parse(dataString!, open: "<picture-url>", close: "</picture-url>");
+                var imageURL = self.parse(dataString!, open:
+                    "<picture-url>", close: "</picture-url>");
+                var firstname = self.parse(dataString!, open:
+                    "<first-name>", close: "</first-name>");
+                var lastname = self.parse(dataString!, open:
+                    "<last-name>", close: "</last-name>");
+                
+                
+                var query = PFQuery(className:"users")
+                query.getObjectInBackgroundWithId(prefs.stringForKey("user")) {
+                    (user: PFObject!, error: NSError!) -> Void in
+                    if error != nil {
+                        println(error)
+                    } else {
+                        user["firstname"] = firstname as String
+                        user["lastname"] = lastname as String
+                        
+                        user.saveInBackground();
+                    }
+                }
+                
+                self.fullName.text = "\(firstname) \(lastname)"
+
                 
                 let url = NSURL(string: imageURL)
                 let data = NSData(contentsOfURL: url!) //make sure your image in this url does exist, otherwise unwrap in a if let check
@@ -49,8 +78,47 @@ class SkillCoinsController: UIViewController {
             }, failure: {(error:NSError!) -> Void in
                 println(error)
         })
+
+        var twoquery = PFQuery(className:"coins")
+        twoquery.whereKey("userid", equalTo:prefs.stringForKey("user"))
+        twoquery.findObjectsInBackgroundWithBlock {
+            (objects: [AnyObject]!, error: NSError!) -> Void in
+            if error == nil {
+                if let objects = objects as? [PFObject] {
+                    for object in objects {
+                        var coins: AnyObject? =  object.valueForKey("coins");
+                        var coin = "\(coins!)"
+                        var createdAt: AnyObject? =  object.valueForKey("createdAt");
+                        var created = "\(createdAt!)"
+
+
+                        self.apps.append("\(coin)")
+                        self.createdAts.append("\(created)")
+                        self.tableView.reloadData();
+                        
+                        
+                    }
+                    
+                    println(self.apps)
+                    for app in self.apps {
+                        println(app);
+                        var add = app.toInt()
+                        self.total = self.total + add!
+                    }
+                    self.skillCAmount.text = String(self.total)
+                    
+                } else {
+                    println("Nope");
+                }
+            } else {
+                println("Error: \(error) \(error.userInfo!)")
+            }
+        }
+        
+        
         
     }
+    
     
     func parse(thing: NSString, open: NSString, close: NSString ) -> NSString
     {
@@ -69,7 +137,26 @@ class SkillCoinsController: UIViewController {
         return thing.substringWithRange(divRange);
     }
     
+    func numberOfSectionsInTableView(tableView: UITableView) -> Int {
+        // 1
+        return 1
+    }
     
+    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        // 2
+        return apps.count
+    }
+    
+    
+    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+        // 3
+        let cell = tableView.dequeueReusableCellWithIdentifier("Cell", forIndexPath: indexPath) as UITableViewCell
+        
+        cell.textLabel?.text = "+ \(apps[indexPath.row]) skillcoins"
+        cell.detailTextLabel?.text = createdAts[indexPath.row]
+        
+        return cell
+    }
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
