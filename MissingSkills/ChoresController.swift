@@ -27,10 +27,18 @@ class ChoresController: UIViewController, UITableViewDataSource, UITableViewDele
     }
     
     
-
-    
     override func viewDidAppear(animated: Bool) {
         var prefs:NSUserDefaults = NSUserDefaults.standardUserDefaults()
+        /*
+        println(NSUserDefaults.standardUserDefaults().dictionaryRepresentation().keys.array.count)
+        NSUserDefaults.standardUserDefaults().setBool(true, forKey: "justAnotherKey1")
+        NSUserDefaults.standardUserDefaults().setBool(true, forKey: "justAnotherKey2")
+        println(NSUserDefaults.standardUserDefaults().dictionaryRepresentation().keys.array.count)
+        for key in NSUserDefaults.standardUserDefaults().dictionaryRepresentation().keys {
+            NSUserDefaults.standardUserDefaults().removeObjectForKey(key.description)
+        }
+        println(NSUserDefaults.standardUserDefaults().dictionaryRepresentation().keys.array.count)
+        */
 
         if(prefs.stringForKey("token") != nil || prefs.stringForKey("secret") != nil ) {
             println(prefs.stringForKey("token"))
@@ -144,6 +152,12 @@ class ChoresController: UIViewController, UITableViewDataSource, UITableViewDele
         let detailedViewController: DetailViewController = self.storyboard?.instantiateViewControllerWithIdentifier("DetailViewController") as DetailViewController
         
         detailedViewController.nameString = karweitje.name;
+        detailedViewController.deadline = karweitje.deadline;
+        detailedViewController.descrip = karweitje.description;
+        detailedViewController.coins = karweitje.coins;
+        detailedViewController.grade = karweitje.grade;
+
+
         
         println("test");
         

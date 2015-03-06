@@ -10,19 +10,48 @@ import UIKit
 
 class DetailViewController: UIViewController {
     
+    @IBOutlet weak var karweitjeNaam: UILabel!
     @IBOutlet weak var nameController: UILabel!
     @IBOutlet weak var navBar: UINavigationBar!
+    @IBOutlet weak var diffIcon: UIImageView!
+    @IBOutlet weak var coinsL: UILabel!
+    @IBOutlet weak var deadlineL: UILabel!
+    @IBOutlet weak var descri: UITextView!
     
     var nameString: String?
+    var descrip: String?
+    var coins: String?
+    var grade: String?
+    var deadline: String?
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        self.nameController.text = nameString;
+        karweitjeNaam.text = nameString;
+        var test = String(grade!);
+        switch(test) {
+            case "hard":
+                diffIcon.image = UIImage(named: "hard.png")
+                break;
+            case "medium":
+                diffIcon.image = UIImage(named: "medium.png")
+                break;
+            case "easy":
+                diffIcon.image = UIImage(named: "easy.png")
+                break;
+        default:
+            break;
+        }
+        coinsL.text = coins;
+        deadlineL.text = deadline;
+        descri.text = descrip
+        self.navigationItem.title = "Count:"
+        self.navigationController?.navigationBar.topItem?.title = "Home"
     }
     
     func viewWillAppear() {
-        navigationItem.title = "Count:"
+        self.navigationItem.title = "Count:"
     }
     
     func positionForBar(bar: UIBarPositioning) -> UIBarPosition {
